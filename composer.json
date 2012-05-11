@@ -1,5 +1,6 @@
 {
 	"require": {
+		"illuminate/cache": ">=1.0.0",
 		"illuminate/foundation": ">=1.0.0"
 	}
 }
