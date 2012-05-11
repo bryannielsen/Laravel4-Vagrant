@@ -28,7 +28,10 @@ $app->detectEnvironment(array(
 |
 */
 
-require __DIR__.'/bulbs/default.php';
+if (file_exists($bulb = __DIR__.'/bulbs/production.php'))
+{
+	require $bulb;
+}
 
 if (file_exists($bulb = __DIR__.'/bulbs/'.$app['env'].'.php'))
 {
