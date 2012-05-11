@@ -1,10 +1,18 @@
 <?php
 
-$app['debug'] = true;
+$app->detectEnvironment(array(
 
-$app->root(function() use ($app)
+	'local' => array('localhost', 'illuminate.app'),
+
+));
+
+require __DIR__.'/bulbs/default.php';
+
+if (file_exists($bulb = __DIR__.'/bulbs/'.$app['env'].'.php'))
 {
-	return 'Hello World!';
-});
+	require $bulb;
+}
+
+require __DIR__.'/routes.php';
 
 return $app;
