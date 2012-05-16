@@ -12,6 +12,16 @@
 |
 */
 
+$app->before(function($request) use ($app)
+{
+	$app['session']->start($request);
+});
+
+$app->after(function($request, $response) use ($app)
+{
+	$app['session']->finish($response);
+});
+
 $app->get('/', function() use ($app)
 {
 	return 'Hello World!';
