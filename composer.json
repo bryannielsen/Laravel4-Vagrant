@@ -1,10 +1,5 @@
 {
 	"require": {
-		"illuminate/cache": ">=1.0.0",
-		"illuminate/encryption": ">=1.0.0",
-		"illuminate/events": ">=1.0.0",
-		"illuminate/filesystem": ">=1.0.0",
-		"illuminate/foundation": ">=1.0.0",
-		"illuminate/session": ">=1.0.0"
+		"illuminate/foundation": ">=1.0.0"
 	}
 }
