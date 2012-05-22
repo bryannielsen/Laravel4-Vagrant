@@ -36,5 +36,5 @@ $app->before(function($request) use ($app)
 
 $app->after(function($request, $response) use ($app)
 {
-	$app['session']->finish($response);
+	$app['session']->finish($response, $app['cookie']);
 });
