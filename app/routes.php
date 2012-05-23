@@ -16,25 +16,3 @@ $app->get('/', function() use ($app)
 {
 	return 'Hello World!';
 });
-
-/*
-|--------------------------------------------------------------------------
-| Application Events
-|--------------------------------------------------------------------------
-|
-| These events run before and after requests to your application and
-| are very useful for pre and post processing. By default they're
-| responsible for starting and finishing the session handling.
-|
-*/
-
-$app->before(function($request) use ($app)
-{
-	$app['session']->start($request);
-});
-
-
-$app->after(function($request, $response) use ($app)
-{
-	$app['session']->finish($response, $app['cookie']);
-});
