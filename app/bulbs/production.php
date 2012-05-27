@@ -13,6 +13,22 @@
 
 $app['debug'] = false;
 
+$viewPath = __DIR__.'/../views';
+
+$app->register(new Silex\Provider\TwigServiceProvider, array(
+
+	'twig.path' => $viewPath,
+
+	'twig.options' => array(
+
+		'auto_reload' => true,
+
+		'cache' => $viewPath.'/cache'
+
+	),
+
+));
+
 /*
 |--------------------------------------------------------------------------
 | Register The Base Service Provider
