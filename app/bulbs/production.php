@@ -13,6 +13,17 @@
 
 $app['debug'] = false;
 
+/*
+|--------------------------------------------------------------------------
+| Register The Twig Service Provider
+|--------------------------------------------------------------------------
+|
+| Twig is a beautiful templating system for your application, including
+| advanced features such as template inheritance and blocks. Twig is
+| already setup for you! Just start creating some beautiful views!
+|
+*/
+
 $viewPath = __DIR__.'/../views';
 
 $app->register(new Silex\Provider\TwigServiceProvider, array(
