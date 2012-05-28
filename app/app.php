@@ -67,7 +67,9 @@ foreach (array_dot($config) as $key => $value)
 |
 */
 
-$app->register(new Illuminate\Foundation\CoreServiceProvider);
+use Illuminate\Foundation\CoreServiceProvider;
+
+$app->register(new CoreServiceProvider);
 
 /*
 |--------------------------------------------------------------------------
