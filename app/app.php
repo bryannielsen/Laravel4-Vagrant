@@ -19,25 +19,25 @@ $app->detectEnvironment(array(
 
 /*
 |--------------------------------------------------------------------------
-| Load The Environment Bulb
+| Load The Environment Configuration
 |--------------------------------------------------------------------------
 |
-| You may specify a "bulb" for each environment. The default bulb will be
-| included on every request and the environment bulb gives a chance to
-| customize the application such as tweaking the IoC bindings, etc.
+| You may specify a config for each environment. The default config will be
+| included on every request and the environment config gives a chance to
+| customize the application such as tweaking each service's options.
 |
 */
 
 $config = array();
 
-if (file_exists($bulb = __DIR__.'/bulbs/production.php'))
+if (file_exists($path = __DIR__.'/config/production.php'))
 {
-	$config = require $bulb;
+	$config = require $path;
 }
 
-if (file_exists($bulb = __DIR__.'/bulbs/'.$app['env'].'.php'))
+if (file_exists($path = __DIR__.'/config/'.$app['env'].'.php'))
 {
-	$config = array_merge($config, require $bulb);
+	$config = array_merge($config, require $path);
 }
 
 /*
