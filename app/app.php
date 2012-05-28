@@ -58,6 +58,28 @@ foreach (array_dot($config) as $key => $value)
 
 /*
 |--------------------------------------------------------------------------
+| Load The Application Translation Messages
+|--------------------------------------------------------------------------
+|
+| Here we'll load all of the language messages for the application, which
+| are all stored in a single language file. The translator service is
+| automatically registered for us via the core services provider.
+|
+*/
+
+$messages = require __DIR__.'/lang.php';
+
+$domains = array();
+
+if (isset($app['translator.domains']))
+{
+	$domains = $app['translator.domains'];
+}
+
+$app['translator.domains'] = array_merge($domains, compact('messages'));
+
+/*
+|--------------------------------------------------------------------------
 | Register The Core Service Provider
 |--------------------------------------------------------------------------
 |

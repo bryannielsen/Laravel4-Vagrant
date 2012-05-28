@@ -14,19 +14,5 @@
 
 $app->get('/', function() use ($app)
 {
-	/*
-	$app['locale'] = 'en';
-	$app->register(new Silex\Provider\TranslationServiceProvider, array(
-		'locale' => 'en',
-		'locale_fallback' => 'en',
-		'translator.domains' => array(
-			'messages' => array(
-				'en' => array(
-					'hello' => 'Hello, :name',
-				),
-			),
-		),
-	));
-	*/
 	return $app->twig->render('hello.twig.html');
 });
