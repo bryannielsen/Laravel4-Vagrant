@@ -26,19 +26,15 @@ $app['debug'] = false;
 
 $viewPath = __DIR__.'/../views';
 
-$app->register(new Silex\Provider\TwigServiceProvider, array(
+$app['twig.path'] = $viewPath;
 
-	'twig.path' => $viewPath,
+$app['twig.options'] = array(
 
-	'twig.options' => array(
+	'auto_reload' => true,
 
-		'auto_reload' => true,
+	'cache' => $viewPath.'/cache',
 
-		'cache' => $viewPath.'/cache'
-
-	),
-
-));
+);
 
 /*
 |--------------------------------------------------------------------------
