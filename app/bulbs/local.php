@@ -1,14 +1,22 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Build The Application For The Local Environment
-|--------------------------------------------------------------------------
-|
-| Here you may tweak the application for your local environment, such as
-| registering a different session or cache provider, or enabling debug
-| mode on the application. You are free to do whatever you wish here.
-|
-*/
+return array(
 
-$app['debug'] = true;
+	'app' => array(
+
+		/*
+		|--------------------------------------------------------------------------
+		| Application Debug Mode
+		|--------------------------------------------------------------------------
+		|
+		| When your application is in debug mode, detailed error messages with
+		| stack traces will be shown on every error that occurs within your
+		| application. When disabled, a simple, generic error is shown.
+		|
+		*/
+
+		'debug' => true,
+
+	),
+
+);

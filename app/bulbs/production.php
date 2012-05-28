@@ -1,63 +1,75 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Build The Application For The Production Environment
-|--------------------------------------------------------------------------
-|
-| Here you may tweak the application for your production environment such
-| as connecting to your production databases, or registering the cache
-| driver used by your production environment. This is the real deal!
-|
-*/
+return array(
 
-$app['debug'] = false;
+	'app' => array(
 
-/*
-|--------------------------------------------------------------------------
-| Register The Twig Service Provider
-|--------------------------------------------------------------------------
-|
-| Twig is a beautiful templating system for your application, including
-| advanced features such as template inheritance and blocks. Twig is
-| already setup for you! Just start creating some beautiful views!
-|
-*/
+		/*
+		|--------------------------------------------------------------------------
+		| Application Debug Mode
+		|--------------------------------------------------------------------------
+		|
+		| When your application is in debug mode, detailed error messages with
+		| stack traces will be shown on every error that occurs within your
+		| application. When disabled, a simple, generic error is shown.
+		|
+		*/
 
-$viewPath = __DIR__.'/../views';
+		'debug' => false,
 
-$app['twig.path'] = $viewPath;
+	),
 
-$app['twig.options'] = array(
+	'encrypter' => array(
 
-	'auto_reload' => true,
+		/*
+		|--------------------------------------------------------------------------
+		| Encryption Key
+		|--------------------------------------------------------------------------
+		|
+		| This key is used by the Illuminate encrypter service and should be set
+		| to a random, long string, otherwise your encrypted values will not
+		| be safe. Be sure to change this before deploying your website!
+		|
+		*/
 
-	'cache' => $viewPath.'/cache',
+		'key' => 'YourSecretKey!',
+
+	),
+
+	'twig' => array(
+
+		/*
+		|--------------------------------------------------------------------------
+		| Twig View Path
+		|--------------------------------------------------------------------------
+		|
+		| Here you may define the location of your Twig views. A sensible path
+		| has already been setup for you, so you probably don't need to do
+		| anything here. Just start creating some beautiful templates!
+		|
+		*/
+
+		'path' => __DIR__.'/../views',
+
+		/*
+		|--------------------------------------------------------------------------
+		| Other Twig Options
+		|--------------------------------------------------------------------------
+		|
+		| This array allows you to specify other Twig options. A list of all of
+		| the options supported by Twig may be found in Twig's documentation
+		| on the official Twig website. Any option may be specified here.
+		|
+		*/
+
+		'options' => array(
+
+			'auto_reload' => true,
+
+			'cache' => __DIR__.'/../views/cache',
+
+		),
+
+	),
 
 );
-
-/*
-|--------------------------------------------------------------------------
-| Register The Base Service Provider
-|--------------------------------------------------------------------------
-|
-| The Illuminate base service provider registers all of the core pieces
-| of the Illuminate framework including session, caching, encryption
-| and more. It's simply a convenient wrapper for the registration.
-|
-*/
-
-$app->register(new Illuminate\Foundation\BaseServiceProvider);
-
-/*
-|--------------------------------------------------------------------------
-| Set The Application Encryption Key
-|--------------------------------------------------------------------------
-|
-| This key is used by the Illuminate encrypter service and should be set
-| to a random, long string, otherwise your encrypted values will not
-| be secure. Be sure to change this before deploying your website!
-|
-*/
-
-$app['encrypter.key'] = 'YourSecretKey!';

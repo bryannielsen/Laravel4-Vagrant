@@ -28,15 +28,46 @@ $app->detectEnvironment(array(
 |
 */
 
+$config = array();
+
 if (file_exists($bulb = __DIR__.'/bulbs/production.php'))
 {
-	require $bulb;
+	$config = require $bulb;
 }
 
 if (file_exists($bulb = __DIR__.'/bulbs/'.$app['env'].'.php'))
 {
-	require $bulb;
+	$config = array_merge($config, require $bulb);
 }
+
+/*
+|--------------------------------------------------------------------------
+| Set The Application Configuration
+|--------------------------------------------------------------------------
+|
+| Now that we have the configuration array, we can set the values on the
+| application instance using "dot" syntax. This will make the options
+| available to all of the services that will also to be registered.
+|
+*/
+
+foreach (array_dot($config) as $key => $value)
+{
+	$app[$key] = $value;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Register The Core Service Provider
+|--------------------------------------------------------------------------
+|
+| The Illuminate core service provider registers all of the core pieces
+| of the Illuminate framework including session, caching, encryption
+| and more. It's simply a convenient wrapper for the registration.
+|
+*/
+
+$app->register(new Illuminate\Foundation\CoreServiceProvider);
 
 /*
 |--------------------------------------------------------------------------
