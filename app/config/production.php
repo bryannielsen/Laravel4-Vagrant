@@ -28,6 +28,8 @@ return array(
 
 	'locale' => 'en',
 
+	'locale_fallback' => 'en',
+
 	'encrypter' => array(
 
 		/*
