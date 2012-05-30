@@ -14,5 +14,5 @@
 
 $app->get('/', function() use ($app)
 {
-	return $app->twig->render('hello.twig.html');
+	return $app->blade->render('hello.blade.php');
 });

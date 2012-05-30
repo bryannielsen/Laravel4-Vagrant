@@ -47,14 +47,14 @@ return array(
 
 	),
 
-	'twig' => array(
+	'blade' => array(
 
 		/*
 		|--------------------------------------------------------------------------
-		| Twig View Path
+		| Blade View Path
 		|--------------------------------------------------------------------------
 		|
-		| Here you may define the location of your Twig views. A sensible path
+		| Here you may define the location of your Blade views. A sensible path
 		| has already been setup for you, so you probably don't need to do
 		| anything here. Just start creating some beautiful templates!
 		|
@@ -64,22 +64,16 @@ return array(
 
 		/*
 		|--------------------------------------------------------------------------
-		| Other Twig Options
+		| Blade Cache Path
 		|--------------------------------------------------------------------------
 		|
-		| This array allows you to specify other Twig options. A list of all of
-		| the options supported by Twig may be found in Twig's documentation
-		| on the official Twig website. Any option may be specified here.
+		| The Blade cache path determines where your compiled Blade view will be
+		| stored on disk. Blade compiles templates down to plain PHP files so
+		| your views can be rendered extremely fast. It is like fresh air.
 		|
 		*/
 
-		'options' => array(
-
-			'auto_reload' => true,
-
-			'cache' => __DIR__.'/../views/cache',
-
-		),
+		'cache' => __DIR__.'/../views/cache',
 
 	),
 
