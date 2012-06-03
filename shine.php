@@ -2,19 +2,6 @@
 
 /*
 |--------------------------------------------------------------------------
-| Define The Application Path
-|--------------------------------------------------------------------------
-|
-| Here we just defined the path to the application directory. Most likely
-| you will never need to change this value, as the default setup should
-| work perfectly fine for the vast majority of all application setups.
-|
-*/
-
-$appPath = __DIR__.'/app';
-
-/*
-|--------------------------------------------------------------------------
 | Turn On The Lights
 |--------------------------------------------------------------------------
 |
@@ -26,6 +13,19 @@ $appPath = __DIR__.'/app';
 */
 
 $app = Illuminate\Foundation\LightSwitch::flip();
+
+/*
+|--------------------------------------------------------------------------
+| Define The Application Path
+|--------------------------------------------------------------------------
+|
+| Here we just defined the path to the application directory. Most likely
+| you will never need to change this value, as the default setup should
+| work perfectly fine for the vast majority of all application setups.
+|
+*/
+
+$appPath = __DIR__.'/app';
 
 /*
 |--------------------------------------------------------------------------
