@@ -1,5 +1,7 @@
 <?php
 
+$appPath = __DIR__.'/app';
+
 /*
 |--------------------------------------------------------------------------
 | Turn On The Lights
@@ -16,6 +18,23 @@ $app = Illuminate\Foundation\LightSwitch::flip();
 
 /*
 |--------------------------------------------------------------------------
+| Detect The Application Environment
+|--------------------------------------------------------------------------
+|
+| Illuminate takes a dead simple approach to application environments.
+| Just specify the hosts that belong to a given environment, and we
+| will quickly detect and set the application environment for you.
+|
+*/
+
+$app->detectEnvironment(array(
+
+	'local' => array('localhost', '*.dev'),
+
+));
+
+/*
+|--------------------------------------------------------------------------
 | Load The Application
 |--------------------------------------------------------------------------
 |
@@ -27,4 +46,6 @@ $app = Illuminate\Foundation\LightSwitch::flip();
 |
 */
 
-return require_once __DIR__.'/app/app.php';
+require_once __DIR__.'/vendor/illuminate/foundation/src/start.php';
+
+return $app;
