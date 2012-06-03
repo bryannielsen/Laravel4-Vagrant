@@ -51,7 +51,7 @@ if (file_exists($path = __DIR__.'/config/'.$app['env'].'.php'))
 |
 */
 
-foreach (array_dot($config) as $key => $value)
+foreach ($config as $key => $value)
 {
 	$app[$key] = $value;
 }

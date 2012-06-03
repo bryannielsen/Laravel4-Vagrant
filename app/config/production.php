@@ -30,51 +30,43 @@ return array(
 
 	'locale_fallback' => 'en',
 
-	'encrypter' => array(
+	/*
+	|--------------------------------------------------------------------------
+	| Encryption Key
+	|--------------------------------------------------------------------------
+	|
+	| This key is used by the Illuminate encrypter service and should be set
+	| to a random, long string, otherwise your encrypted values will not
+	| be safe. Be sure to change this before deploying your website!
+	|
+	*/
 
-		/*
-		|--------------------------------------------------------------------------
-		| Encryption Key
-		|--------------------------------------------------------------------------
-		|
-		| This key is used by the Illuminate encrypter service and should be set
-		| to a random, long string, otherwise your encrypted values will not
-		| be safe. Be sure to change this before deploying your website!
-		|
-		*/
+	'encrypter.key' => 'YourSecretKey!',
 
-		'key' => 'YourSecretKey!',
+	/*
+	|--------------------------------------------------------------------------
+	| Blade View Path
+	|--------------------------------------------------------------------------
+	|
+	| Here you may define the location of your Blade views. A sensible path
+	| has already been setup for you, so you probably don't need to do
+	| anything here. Just start creating some beautiful templates!
+	|
+	*/
 
-	),
+	'blade.path' => __DIR__.'/../views',
 
-	'blade' => array(
+	/*
+	|--------------------------------------------------------------------------
+	| Blade Cache Path
+	|--------------------------------------------------------------------------
+	|
+	| The Blade cache path determines where your compiled Blade view will be
+	| stored on disk. Blade compiles templates down to plain PHP files so
+	| your views can be rendered extremely fast. It is like fresh air.
+	|
+	*/
 
-		/*
-		|--------------------------------------------------------------------------
-		| Blade View Path
-		|--------------------------------------------------------------------------
-		|
-		| Here you may define the location of your Blade views. A sensible path
-		| has already been setup for you, so you probably don't need to do
-		| anything here. Just start creating some beautiful templates!
-		|
-		*/
-
-		'path' => __DIR__.'/../views',
-
-		/*
-		|--------------------------------------------------------------------------
-		| Blade Cache Path
-		|--------------------------------------------------------------------------
-		|
-		| The Blade cache path determines where your compiled Blade view will be
-		| stored on disk. Blade compiles templates down to plain PHP files so
-		| your views can be rendered extremely fast. It is like fresh air.
-		|
-		*/
-
-		'cache' => __DIR__.'/../views/cache',
-
-	),
+	'blade.cache' => __DIR__.'/../views/cache',
 
 );
