@@ -35,7 +35,7 @@ return array(
 		"validation.required"        => "The :attribute field is required.",
 		"validation.same"            => "The :attribute and :other must match.",
 		"validation.size.numeric"    => "The :attribute must be :size.",
-		"validation.size.file"       => "The :attribute must be :size kilobyte.",
+		"validation.size.file"       => "The :attribute must be :size kilobytes.",
 		"validation.size.string"     => "The :attribute must be :size characters.",
 		"validation.unique"          => "The :attribute has already been taken.",
 		"validation.url"             => "The :attribute format is invalid.",
