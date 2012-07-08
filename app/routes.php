@@ -6,9 +6,8 @@
 |--------------------------------------------------------------------------
 |
 | Here is where you can register all of the routes for your application.
-| It's a breeze. Just tell Illuminate which URIs it should respond to
-| and give it a Closure to execute when that URI is accessed. It is
-| a walk in the park. Enjoy the simplicity of HTTP based routing.
+| It's a breeze. Just tell Illuminate the URIs it should respond to
+| and give it the Closure to execute when that URI is requested.
 |
 */
 
