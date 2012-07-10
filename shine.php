@@ -12,7 +12,7 @@
 |
 */
 
-$app = Illuminate\Foundation\LightSwitch::flip();
+$app = Illuminate\Foundation\Lightbulb::on();
 
 /*
 |--------------------------------------------------------------------------
