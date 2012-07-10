@@ -4,5 +4,6 @@
 	},
 	"autoload": {
 		"classmap": ["app/tests/TestCase.php"]
-	}
+	},
+	"minimum-stability": "dev"
 }
