@@ -9,9 +9,9 @@ class TestCase extends Silex\WebTestCase {
 	 */
 	public function setUp()
 	{
-		$this->client = $this->createClient();
-
 		parent::setUp();
+
+		$this->client = $this->createClient();
 	}
 
 	/**
