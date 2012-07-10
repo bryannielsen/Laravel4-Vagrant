@@ -2,6 +2,30 @@
 
 class TestCase extends Silex\WebTestCase {
 
+	/**
+	 * Setup the test environment.
+	 *
+	 * @return void
+	 */
+	public function setUp()
+	{
+		$this->client = $this->createClient();
+
+		parent::setUp();
+	}
+
+	/**
+	 * Execute a request against the test client application.
+	 *
+	 * @return Symfony\Component\DomCrawler\Crawler
+	 */
+	public function request()
+	{
+		$callable = array($this->client, 'request');
+
+		return call_user_func_array($callable, func_get_args());
+	}
+
     /**
      * Creates the application.
      *
