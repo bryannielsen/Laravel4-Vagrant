@@ -15,7 +15,7 @@
 | Composer provides a convenient, automatically generated class loader
 | for our application. We just need to utilize it! We'll require it
 | into the script here so that we don't have to worry about the
-| loading of any our classes manually. Feels good to relax.
+| loading of any our classes manually. Feels great to relax.
 |
 */
 
@@ -29,7 +29,7 @@ require __DIR__.'/../vendor/autoload.php';
 | We need to illuminate PHP development, so let's turn on the lights.
 | This bootstrap the framework and gets it ready for use, then it
 | will load up the application so that we can run it and send
-| the response back to the browser and delight our users.
+| the responses back to the browser and delight our users.
 |
 */
 
