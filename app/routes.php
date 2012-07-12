@@ -13,5 +13,5 @@
 
 $app->get('/', function() use ($app)
 {
-	return $app->blade->render('hello.blade.php');
+	return $app->show('hello');
 });
