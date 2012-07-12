@@ -9,7 +9,7 @@ return array(
 	|
 	| When your application is in debug mode, detailed error messages with
 	| stack traces will be shown on every error that occurs within your
-	| application. When disabled, a simple, generic error is shown.
+	| applications. When disabled, a simple, generic error is shown.
 	|
 	*/
 
@@ -22,7 +22,7 @@ return array(
 	|
 	| The application locale determines the default locale that will be used
 	| by the translation service provider. You're free to set this value
-	| to any of the locales which are supported by your application.
+	| to any of the locales which are supported by your applications.
 	|
 	*/
 
@@ -68,5 +68,30 @@ return array(
 	*/
 
 	'blade.cache' => __DIR__.'/../views/cache',
+
+	/*
+	|--------------------------------------------------------------------------
+	| Autoloaded Service Providers
+	|--------------------------------------------------------------------------
+	|
+	| The service providers listed here will be automatically loaded on each
+	| request to your application. Feel free to add your own services to
+	| this array to give expanded functionality to your applications.
+	|
+	*/
+
+	'providers' => array(
+
+		'Illuminate\Foundation\Provider\AuthServiceProvider',
+		'Illuminate\Foundation\Provider\BladeServiceProvider',
+		'Illuminate\Foundation\Provider\CookieServiceProvider',
+		'Illuminate\Foundation\Provider\EncrypterServiceProvider',
+		'Illuminate\Foundation\Provider\EventsServiceProvider',
+		'Illuminate\Foundation\Provider\FilesServiceProvider',
+		'Illuminate\Foundation\Provider\SessionServiceProvider',
+		'Illuminate\Foundation\Provider\SilexServiceProvider',
+		'Illuminate\Foundation\Provider\ValidatorServiceProvider',
+
+	),
 
 );
