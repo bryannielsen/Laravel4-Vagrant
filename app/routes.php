@@ -11,7 +11,7 @@
 |
 */
 
-$app->get('/', function() use ($app)
+On::get('/', function()
 {
-	return $app->show('hello');
+	return Blade::show('hello');
 });

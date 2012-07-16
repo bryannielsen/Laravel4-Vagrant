@@ -45,6 +45,19 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
+	| Static Facades
+	|--------------------------------------------------------------------------
+	|
+	| When enabled, this allows access to most of the framework's parts via
+	| a simple, terse static interfaces. But don't worry, it still makes
+	| use of this application's IoC container for ease of testability.
+	|
+	*/
+
+	'facade' => true,
+
+	/*
+	|--------------------------------------------------------------------------
 	| Blade View Path
 	|--------------------------------------------------------------------------
 	|
