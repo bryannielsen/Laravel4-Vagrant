@@ -102,7 +102,6 @@ return array(
 		'Illuminate\Foundation\Provider\EventsServiceProvider',
 		'Illuminate\Foundation\Provider\FilesServiceProvider',
 		'Illuminate\Foundation\Provider\SessionServiceProvider',
-		'Illuminate\Foundation\Provider\SilexServiceProvider',
 		'Illuminate\Foundation\Provider\ValidatorServiceProvider',
 
 	),

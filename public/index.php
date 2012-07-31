@@ -43,7 +43,7 @@ $app = require_once __DIR__.'/../shine.php';
 | Once we have the application, we can simple call the run method,
 | which will execute the request and send the response back to
 | the client's browser allowing them to enjoy the creative
-| and wonderful application we have created for them.
+| this wonderful applications we have created for them.
 |
 */
 

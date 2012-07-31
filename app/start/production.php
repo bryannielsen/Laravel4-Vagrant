@@ -13,7 +13,9 @@
 |
 */
 
+/*
 $app->error(function(Exception $e, $code)
 {
 	//
 });
+*/
