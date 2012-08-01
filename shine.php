@@ -40,7 +40,7 @@ $appPath = __DIR__.'/app';
 
 $app->detectEnvironment(array(
 
-	'local' => array('localhost', '*.dev'),
+	'local' => array('localhost', '*.dev', '*.app'),
 
 ));
 
