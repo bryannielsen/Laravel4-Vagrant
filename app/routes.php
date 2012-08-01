@@ -13,5 +13,5 @@
 
 On::get('/', function()
 {
-	return Blade::show('hello');
+	return View::of('hello');
 });
