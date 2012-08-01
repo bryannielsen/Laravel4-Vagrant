@@ -25,6 +25,6 @@ return array(
 	|
 	*/
 
-	'profiler' => true,
+	'profiler.enable' => true,
 
 );
