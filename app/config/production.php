@@ -86,7 +86,7 @@ return array(
 	| Blade Cache Path
 	|--------------------------------------------------------------------------
 	|
-	| The Blade cache path determines where your compiled Blade view will be
+	| The Blade cache path determines where your compiled Blade views will be
 	| stored on disk. Blade compiles templates down to plain PHP files so
 	| your views can be rendered extremely fast. It is like fresh air.
 	|
