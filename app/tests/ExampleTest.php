@@ -9,7 +9,7 @@ class ExampleTest extends TestCase {
 	 */
 	public function testBasicExample()
 	{
-		$crawler = $this->request('GET', '/');
+		$crawler = $this->client->request('GET', '/');
 
 		$this->assertCount(1, $crawler->filter('h1:contains("Hello World!")'));
 	}
