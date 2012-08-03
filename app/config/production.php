@@ -115,6 +115,7 @@ return array(
 		'Illuminate\Foundation\Provider\FilesServiceProvider',
 		'Illuminate\Foundation\Provider\SessionServiceProvider',
 		'Illuminate\Foundation\Provider\ValidatorServiceProvider',
+		'Illuminate\Profiler\ProfilerServiceProvider',
 
 	),
 
