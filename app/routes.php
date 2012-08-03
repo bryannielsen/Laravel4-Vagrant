@@ -11,7 +11,7 @@
 |
 */
 
-On::get('/', function()
+Route::get('/', function()
 {
 	return View::of('hello');
 });

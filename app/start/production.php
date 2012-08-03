@@ -13,9 +13,7 @@
 |
 */
 
-/*
-$app->error(function(Exception $e, $code)
+App::error(function(Exception $e, $code)
 {
 	//
 });
-*/
