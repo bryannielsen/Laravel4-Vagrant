@@ -16,7 +16,7 @@
 |
 */
 
-define('ILLUMINATE_START', microtime());
+define('ILLUMINATE_START', microtime(true));
 
 /*
 |--------------------------------------------------------------------------
