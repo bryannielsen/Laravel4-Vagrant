@@ -7,15 +7,6 @@
  * @author   Taylor Otwell <taylorotwell@gmail.com>
  */
 
-/*
-|--------------------------------------------------------------------------
-| Start Your Engines!
-|--------------------------------------------------------------------------
-|
-| Create a starting timestamp to enable profiling.
-|
-*/
-
 define('ILLUMINATE_START', microtime(true));
 
 /*
