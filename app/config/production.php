@@ -112,7 +112,6 @@ return array(
 		'Illuminate\Foundation\Providers\CookieServiceProvider',
 		'Illuminate\Foundation\Providers\EncrypterServiceProvider',
 		'Illuminate\Foundation\Providers\EventsServiceProvider',
-		'Illuminate\Foundation\Providers\FilesServiceProvider',
 		'Illuminate\Foundation\Providers\SessionServiceProvider',
 		'Illuminate\Foundation\Providers\ValidatorServiceProvider',
 		'Illuminate\Profiler\ProfilerServiceProvider',
