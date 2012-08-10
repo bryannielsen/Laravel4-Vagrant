@@ -9,7 +9,7 @@ return array(
 	|
 	| When your application is in debug mode, detailed error messages with
 	| stack traces will be shown on every error that occurs within your
-	| applications. When disabled, a simple, generic error is shown.
+	| application. If disabled, a simple generic error page is shown.
 	|
 	*/
 
@@ -37,7 +37,7 @@ return array(
 	|
 	| This key is used by the Illuminate encrypter service and should be set
 	| to a random, long string, otherwise your encrypted values will not
-	| be safe. Be sure to change this before deploying your website!
+	| be safe. Be sure to change this before deploying your websites!
 	|
 	*/
 
@@ -101,7 +101,7 @@ return array(
 	|
 	| The service providers listed here will be automatically loaded on each
 	| request to your application. Feel free to add your own services to
-	| this array to give expanded functionality to your applications.
+	| this array to grant expanded functionality to your applications.
 	|
 	*/
 
