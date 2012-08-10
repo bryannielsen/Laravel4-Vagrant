@@ -107,14 +107,14 @@ return array(
 
 	'providers' => array(
 
-		'Illuminate\Foundation\Provider\AuthServiceProvider',
-		'Illuminate\Foundation\Provider\BladeServiceProvider',
-		'Illuminate\Foundation\Provider\CookieServiceProvider',
-		'Illuminate\Foundation\Provider\EncrypterServiceProvider',
-		'Illuminate\Foundation\Provider\EventsServiceProvider',
-		'Illuminate\Foundation\Provider\FilesServiceProvider',
-		'Illuminate\Foundation\Provider\SessionServiceProvider',
-		'Illuminate\Foundation\Provider\ValidatorServiceProvider',
+		'Illuminate\Foundation\Providers\AuthServiceProvider',
+		'Illuminate\Foundation\Providers\BladeServiceProvider',
+		'Illuminate\Foundation\Providers\CookieServiceProvider',
+		'Illuminate\Foundation\Providers\EncrypterServiceProvider',
+		'Illuminate\Foundation\Providers\EventsServiceProvider',
+		'Illuminate\Foundation\Providers\FilesServiceProvider',
+		'Illuminate\Foundation\Providers\SessionServiceProvider',
+		'Illuminate\Foundation\Providers\ValidatorServiceProvider',
 		'Illuminate\Profiler\ProfilerServiceProvider',
 
 	),
