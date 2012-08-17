@@ -58,9 +58,11 @@ return array(
 
 		'Illuminate\Foundation\Providers\AuthServiceProvider',
 		'Illuminate\Foundation\Providers\BladeServiceProvider',
+		'Illuminate\Foundation\Providers\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\CookieServiceProvider',
 		'Illuminate\Foundation\Providers\EncrypterServiceProvider',
 		'Illuminate\Foundation\Providers\EventsServiceProvider',
+		'Illuminate\Foundation\Providers\FilesystemServiceProvider',
 		'Illuminate\Foundation\Providers\SessionServiceProvider',
 		'Illuminate\Foundation\Providers\ValidatorServiceProvider',
 
