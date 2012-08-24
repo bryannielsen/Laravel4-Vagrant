@@ -60,6 +60,7 @@ return array(
 		'Illuminate\Foundation\Providers\BladeServiceProvider',
 		'Illuminate\Foundation\Providers\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\CookieServiceProvider',
+		'Illuminate\Foundation\Providers\DatabaseServiceProvider',
 		'Illuminate\Foundation\Providers\EncrypterServiceProvider',
 		'Illuminate\Foundation\Providers\EventsServiceProvider',
 		'Illuminate\Foundation\Providers\FilesystemServiceProvider',
