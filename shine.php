@@ -25,7 +25,7 @@ $app = Illuminate\Foundation\Lightbulb::on();
 |
 */
 
-$appPath = __DIR__.'/app';
+$app['path'] = __DIR__.'/app';
 
 /*
 |--------------------------------------------------------------------------
