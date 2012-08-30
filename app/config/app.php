@@ -64,6 +64,7 @@ return array(
 		'Illuminate\Foundation\Providers\EncrypterServiceProvider',
 		'Illuminate\Foundation\Providers\EventsServiceProvider',
 		'Illuminate\Foundation\Providers\FilesystemServiceProvider',
+		'Illuminate\Foundation\Providers\HashServiceProvider',
 		'Illuminate\Foundation\Providers\SessionServiceProvider',
 		'Illuminate\Foundation\Providers\ValidatorServiceProvider',
 
