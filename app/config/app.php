@@ -26,9 +26,13 @@ return array(
 	|
 	*/
 
+	'locales' => array('en'),
+
 	'locale' => 'en',
 
-	'locale_fallback' => 'en',
+	'fallback_locale' => 'en',
+
+	'locale_path' => __DIR__.'/../lang',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -65,6 +69,7 @@ return array(
 		'Illuminate\Foundation\Providers\FilesystemServiceProvider',
 		'Illuminate\Foundation\Providers\HashServiceProvider',
 		'Illuminate\Foundation\Providers\SessionServiceProvider',
+		'Illuminate\Foundation\Providers\TranslationServiceProvider',
 		'Illuminate\Foundation\Providers\ValidatorServiceProvider',
 		'Illuminate\Foundation\Providers\ViewServiceProvider',
 
