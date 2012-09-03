@@ -57,7 +57,6 @@ return array(
 	'providers' => array(
 
 		'Illuminate\Foundation\Providers\AuthServiceProvider',
-		'Illuminate\Foundation\Providers\BladeServiceProvider',
 		'Illuminate\Foundation\Providers\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\CookieServiceProvider',
 		'Illuminate\Foundation\Providers\DatabaseServiceProvider',
@@ -67,6 +66,7 @@ return array(
 		'Illuminate\Foundation\Providers\HashServiceProvider',
 		'Illuminate\Foundation\Providers\SessionServiceProvider',
 		'Illuminate\Foundation\Providers\ValidatorServiceProvider',
+		'Illuminate\Foundation\Providers\ViewServiceProvider',
 
 	),
 
