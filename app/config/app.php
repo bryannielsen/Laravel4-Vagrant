@@ -49,6 +49,24 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
+	| Class Aliases
+	|--------------------------------------------------------------------------
+	|
+	| This array of class aliases will be registered when this application
+	| is started. However, feel free to register as many as you wish as
+	| the aliases are "lazy" loaded so they don't hinder performance.
+	|
+	*/
+
+	'aliases' => array(
+
+		'Controller' => 'Illuminate\Routing\Controller',
+		'Eloquent'   => 'Illuminate\Database\Eloquent\Model',
+
+	),
+
+	/*
+	|--------------------------------------------------------------------------
 	| Autoloaded Service Providers
 	|--------------------------------------------------------------------------
 	|
@@ -60,6 +78,7 @@ return array(
 
 	'providers' => array(
 
+		'Illuminate\Foundation\Providers\AliasServiceProvider',
 		'Illuminate\Foundation\Providers\AuthServiceProvider',
 		'Illuminate\Foundation\Providers\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\CookieServiceProvider',
