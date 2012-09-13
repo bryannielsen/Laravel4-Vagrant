@@ -3,7 +3,11 @@
 		"illuminate/foundation": ">=1.0.0"
 	},
 	"autoload": {
-		"classmap": ["app/tests/TestCase.php"]
+		"classmap": [
+			"app/controllers",
+			"app/domain",
+			"app/tests/TestCase.php"
+		]
 	},
 	"minimum-stability": "dev"
 }
