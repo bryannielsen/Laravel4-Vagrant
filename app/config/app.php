@@ -88,6 +88,7 @@ return array(
 		'Illuminate\Foundation\Providers\FilesystemServiceProvider',
 		'Illuminate\Foundation\Providers\HashServiceProvider',
 		'Illuminate\Foundation\Providers\PaginationServiceProvider',
+		'Illuminate\Foundation\Providers\RedisServiceProvider',
 		'Illuminate\Foundation\Providers\SessionServiceProvider',
 		'Illuminate\Foundation\Providers\TranslationServiceProvider',
 		'Illuminate\Foundation\Providers\ValidatorServiceProvider',
