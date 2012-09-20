@@ -11,7 +11,7 @@ return array(
 	| using the Caching library. Of course, you may use other drivers any
 	| time you wish. This is the default when another is not specified.
 	|
-	| Supported: "file", "apc", "memcached", "memory"
+	| Supported: "file", "apc", "memcached", "redis", "memory"
 	|
 	*/
 

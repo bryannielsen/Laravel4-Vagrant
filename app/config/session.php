@@ -11,7 +11,7 @@ return array(
 	| requets. By default, we will use the light-weight cookie driver but
 	| you may specify any of the other wonderful drivers provided here.
 	|
-	| Supported: "file", "apc", "memcached", "memory"
+	| Supported: "file", "apc", "memcached", "redis", "memory"
 	|
 	*/
 
