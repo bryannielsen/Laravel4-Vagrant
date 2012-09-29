@@ -1,13 +1,4 @@
 <?php
-/**
- * Laravel - A PHP Framework For Web Artisans
- *
- * @package  Laravel
- * @version  4.0.0
- * @author   Taylor Otwell <taylorotwell@gmail.com>
- */
-
-define('ILLUMINATE_START', microtime(true));
 
 /*
 |--------------------------------------------------------------------------
@@ -36,17 +27,3 @@ require __DIR__.'/../vendor/autoload.php';
 */
 
 $app = require_once __DIR__.'/../shine.php';
-
-/*
-|--------------------------------------------------------------------------
-| Run The Application
-|--------------------------------------------------------------------------
-|
-| Once we have the application, we can simple call the run method,
-| which will execute the request and send the response back to
-| the client's browser allowing them to enjoy the creative
-| this wonderful applications we have created for them.
-|
-*/
-
-$app->run();
