@@ -11,7 +11,7 @@
 |
 */
 
-Log::useRotatingFiles(__DIR__.'/../storage/logs/log.txt');
+Log::useDailyFiles(__DIR__.'/../storage/logs/log.txt');
 
 /*
 |--------------------------------------------------------------------------
