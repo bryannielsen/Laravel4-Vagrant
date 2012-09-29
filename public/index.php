@@ -1,9 +1,9 @@
 <?php
 /**
- * Illuminate - A PHP Framework For The Bright.
+ * Laravel - A PHP Framework For Web Artisans
  *
- * @package  Illuminate
- * @version  1.0.0
+ * @package  Laravel
+ * @version  4.0.0
  * @author   Taylor Otwell <taylorotwell@gmail.com>
  */
 
