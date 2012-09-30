@@ -28,10 +28,13 @@ require __DIR__.'/../vendor/autoload.php';
 
 $app = require_once __DIR__.'/../shine.php';
 
-// Create CLI Application...
 
-// Set Laravel application on Console app...
+use Illuminate\Console\Application;
+
+$console = new Application('Laravel Framework', LARAVEL_VESRION);
+
+$console->setLaravel($app);
 
 // Register commands...
 
-// Run...
+$console->run();
