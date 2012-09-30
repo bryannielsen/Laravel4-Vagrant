@@ -12,7 +12,7 @@
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -26,12 +26,12 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/../shine.php';
+$app = require_once __DIR__.'/shine.php';
 
 
 use Illuminate\Console\Application;
 
-$console = new Application('Laravel Framework', LARAVEL_VESRION);
+$console = new Application('Laravel Framework', LARAVEL_VERSION);
 
 $console->setLaravel($app);
 
