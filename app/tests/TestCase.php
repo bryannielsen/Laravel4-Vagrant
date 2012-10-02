@@ -9,7 +9,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
      */
     public function createApplication()
     {
-    	return require __DIR__.'/../../shine.php';
+    	return require __DIR__.'/../../start.php';
     }
 
 }
