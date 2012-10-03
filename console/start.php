@@ -42,6 +42,6 @@ $artisan->setLaravel($app);
 |
 */
 
-require $app['path'].'/artisan/start.php';
+require $app['path'].'/start/artisan.php';
 
 return $artisan;
