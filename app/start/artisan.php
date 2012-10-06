@@ -13,6 +13,6 @@
 
 $artisan->resolveCommands(array(
 
-	//'command.migrate',
+	'command.migrate',
 
 ));
