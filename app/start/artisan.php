@@ -11,4 +11,8 @@
 |
 */
 
-//$artisan->resolve('command.migrate');
+$artisan->resolveCommands(array(
+
+	//'command.migrate',
+
+));
