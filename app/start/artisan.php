@@ -14,5 +14,7 @@
 $artisan->resolveCommands(array(
 
 	'command.migrate',
+	'command.migrate.rollback',
+	'command.migrate.reset',
 
 ));
