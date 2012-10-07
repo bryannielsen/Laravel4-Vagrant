@@ -37,6 +37,7 @@ return array(
 	| Of course, examples of configuring each database platform that is
 	| supported by Laravel is shown below to make development simple.
 	|
+	|
 	| All database work in Laravel is done through the PHP PDO facilities
 	| so make sure you have the driver for your particular database of
 	| choice installed on your machine before you begin development.
@@ -96,7 +97,38 @@ return array(
 
 	'migration' => array(
 
-		'path' => __DIR__.'/../database/migrations',
+	/*
+	|--------------------------------------------------------------------------
+	| Migration Paths
+	|--------------------------------------------------------------------------
+	|
+	| This array contains the paths to your migration files. For almost every
+	| appliactions you build, the default "application" path that is given
+	| will suffice; however you're free to include more migration paths.
+	|
+	|
+	| Once a new path is added you may use the "--package" switch the console
+	| application's "migrate:make" command to create a new migrations file
+	| that is located at that location without specifying the full path.
+	|
+	*/
+
+		'paths' => array(
+
+			'application' => __DIR__.'/../database/migrations',
+
+		),
+
+	/*
+	|--------------------------------------------------------------------------
+	| Migration Repository Table
+	|--------------------------------------------------------------------------
+	|
+	| This table keeps track of all the migrations that have already run for
+	| your application. Using this information, we can determine which of
+	| the migrations on disk have not actually be run in the databases.
+	|
+	*/
 
 		'table' => 'migrations',
 
