@@ -10,11 +10,3 @@
 | the console gets access to each of the command object instances.
 |
 */
-
-$artisan->resolveCommands(array(
-
-	'command.migrate',
-	'command.migrate.rollback',
-	'command.migrate.reset',
-
-));

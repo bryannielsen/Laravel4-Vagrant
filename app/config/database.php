@@ -85,6 +85,25 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
+	| Database Migration Options
+	|--------------------------------------------------------------------------
+	|
+	| Database migrations are version control for your database and are very
+	| nice when you're working in a team environment. Here you will set a
+	| few of the migration options, like the migrations directory path.
+	|
+	*/
+
+	'migration' => array(
+
+		'path' => __DIR__.'/../database/migrations',
+
+		'table' => 'migrations',
+
+	),
+
+	/*
+	|--------------------------------------------------------------------------
 	| Redis Databases
 	|--------------------------------------------------------------------------
 	|
