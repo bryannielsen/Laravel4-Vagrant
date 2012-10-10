@@ -40,8 +40,8 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	| This key is used by the Illuminate encrypter service and should be set
-	| to a random, long string, otherwise your encrypted values will not
-	| be safe. Be sure to change this before deploying your websites!
+	| to a random, long string, otherwise these encrypted values will not
+	| be safe. Make sure to change it before deploying any application!
 	|
 	*/
 
@@ -70,7 +70,7 @@ return array(
 	| Autoloaded Service Providers
 	|--------------------------------------------------------------------------
 	|
-	| The service providers listed here will be automatically loaded on each
+	| The service providers listed here will be automatically loaded on the
 	| request to your application. Feel free to add your own services to
 	| this array to grant expanded functionality to your applications.
 	|
