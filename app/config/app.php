@@ -81,6 +81,7 @@ return array(
 		'Illuminate\Foundation\Providers\AliasServiceProvider',
 		'Illuminate\Foundation\Providers\AuthServiceProvider',
 		'Illuminate\Foundation\Providers\CacheServiceProvider',
+		'Illuminate\Foundation\Providers\ComposerServiceProvider',
 		'Illuminate\Foundation\Providers\CookieServiceProvider',
 		'Illuminate\Foundation\Providers\DatabaseServiceProvider',
 		'Illuminate\Foundation\Providers\EncrypterServiceProvider',

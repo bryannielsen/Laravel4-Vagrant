@@ -6,6 +6,7 @@
 		"classmap": [
 			"app/controllers",
 			"app/domain",
+			"app/database/migrations",
 			"app/tests/TestCase.php"
 		]
 	},
