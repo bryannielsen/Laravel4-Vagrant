@@ -73,7 +73,7 @@ return array(
 
 	'aliases' => array(
 
-		'Controller' => 'Illuminate\Routing\Controller',
+		'Controller' => 'Illuminate\Routing\Controllers\Controller',
 		'Eloquent'   => 'Illuminate\Database\Eloquent\Model',
 
 	),
@@ -95,6 +95,7 @@ return array(
 		'Illuminate\Foundation\Providers\AuthServiceProvider',
 		'Illuminate\Foundation\Providers\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\ComposerServiceProvider',
+		'Illuminate\Foundation\Providers\ControllerServiceProvider',
 		'Illuminate\Foundation\Providers\CookieServiceProvider',
 		'Illuminate\Foundation\Providers\DatabaseServiceProvider',
 		'Illuminate\Foundation\Providers\EncrypterServiceProvider',
