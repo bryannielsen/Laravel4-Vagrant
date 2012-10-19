@@ -11,7 +11,7 @@ return array(
 	| using the Caching library. Of course, you may use other drivers any
 	| time you wish. This is the default when another is not specified.
 	|
-	| Supported: "file", "apc", "memcached", "redis", "array"
+	| Supported: "file", "database", "apc", "memcached", "redis", "array"
 	|
 	*/
 
@@ -29,6 +29,32 @@ return array(
 	*/
 
 	'path' => __DIR__.'/../storage/cache',
+
+	/*
+	|--------------------------------------------------------------------------
+	| Database Cache Connection
+	|--------------------------------------------------------------------------
+	|
+	| When using the "database" cache driver you may specify the connection
+	| that should be used to store the cached items. When this option is
+	| null the default database connection will be utilized for cache.
+	|
+	*/
+
+	'connection' => null,
+
+	/*
+	|--------------------------------------------------------------------------
+	| Database Cache Table
+	|--------------------------------------------------------------------------
+	|
+	| When using the "database" cache driver we need to know the table that
+	| should be used to store the cached items. A default table name has
+	| been provided but you're free to change it however you deem fit.
+	|
+	*/
+
+	'table' => 'cache',
 
 	/*
 	|--------------------------------------------------------------------------

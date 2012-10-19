@@ -11,11 +11,25 @@ return array(
 	| requets. By default, we will use the light-weight cookie driver but
 	| you may specify any of the other wonderful drivers provided here.
 	|
-	| Supported: "cookie", file", "apc", "memcached", "redis", "array"
+	| Supported: "cookie", file", "database", "apc",
+	|            "memcached", "redis", "array"
 	|
 	*/
 
 	'driver' => 'cookie',
+
+	/*
+	|--------------------------------------------------------------------------
+	| Session Lifetime
+	|--------------------------------------------------------------------------
+	|
+	| Here you may specify the number of minutes that you wish the session
+	| to be allowed to remain idle for it is expired. If you want them
+	| to immediately expire when the browser closes, set it to zero.
+	|
+	*/
+
+	'lifetime' => 120,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -32,16 +46,29 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
-	| Session Lifetime
+	| Session Database Connection
 	|--------------------------------------------------------------------------
 	|
-	| Here you may specify the number of minutes that you wish the session
-	| to be allowed to remain idle for it is expired. If you want them
-	| to immediately expire when the browser closes, set it to zero.
+	| When using the "database" session driver, you may specify the database
+	| connection that should be used to manage your sessions. This should
+	| correspond to a connection in your "database" configuration file.
 	|
 	*/
 
-	'lifetime' => 120,
+	'connection' => null,
+
+	/*
+	|--------------------------------------------------------------------------
+	| Session Database Table
+	|--------------------------------------------------------------------------
+	|
+	| When using the "database" session driver, you may specify the table we
+	| should use to manage the sessions. Of course, a sensible default is
+	| provided for you; however, you are free to change this as needed.
+	|
+	*/
+
+	'table' => 'sessions',
 
 	/*
 	|--------------------------------------------------------------------------
