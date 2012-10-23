@@ -103,6 +103,7 @@ return array(
 		'Illuminate\Foundation\Providers\FilesystemServiceProvider',
 		'Illuminate\Foundation\Providers\HashServiceProvider',
 		'Illuminate\Foundation\Providers\LogServiceProvider',
+		'Illuminate\Foundation\Providers\MailServiceProvider',
 		'Illuminate\Foundation\Providers\MigrationServiceProvider',
 		'Illuminate\Foundation\Providers\PaginationServiceProvider',
 		'Illuminate\Foundation\Providers\RedisServiceProvider',
