@@ -79,6 +79,6 @@ $app['config.loader'] = $app->share(function($app)
 |
 */
 
-require_once __DIR__.'/vendor/illuminate/foundation/src/start.php';
+require __DIR__.'/vendor/illuminate/foundation/src/start.php';
 
 return $app;
