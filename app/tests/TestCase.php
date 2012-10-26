@@ -9,6 +9,8 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
      */
     public function createApplication()
     {
+    	$unitTesting = true;
+
     	return require __DIR__.'/../../start.php';
     }
 

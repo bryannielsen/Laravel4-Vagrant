@@ -50,6 +50,19 @@ $app->detectEnvironment(array(
 
 /*
 |--------------------------------------------------------------------------
+| Check For The Test Environment
+|--------------------------------------------------------------------------
+|
+| If the "unitTesting" variable is set, it means we are running the unit
+| tests for the application and should override this environment here
+| so we use the right configuration. The flag gets set by TestCase.
+|
+*/
+
+if ($unitTesting) $app['env'] = 'testing';
+
+/*
+|--------------------------------------------------------------------------
 | Register The Configuration Loader
 |--------------------------------------------------------------------------
 |
