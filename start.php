@@ -59,7 +59,7 @@ $app->detectEnvironment(array(
 |
 */
 
-if ($unitTesting) $app['env'] = $testEnvironment;
+if (isset($unitTesting)) $app['env'] = $testEnvironment;
 
 /*
 |--------------------------------------------------------------------------
