@@ -5,7 +5,7 @@
 	"autoload": {
 		"classmap": [
 			"app/controllers",
-			"app/domain",
+			"app/models",
 			"app/database/migrations",
 			"app/tests/TestCase.php"
 		]
