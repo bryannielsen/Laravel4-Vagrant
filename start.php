@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Filesystem;
+use Illuminate\Config\FileLoader;
+use Illuminate\Config\ApcFileLoader;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,7 +78,7 @@ $app['config.loader'] = $app->share(function($app)
 {
 	$path = $app['path'].'/config';
 
-	return new Illuminate\Config\FileLoader(new Filesystem, $path);
+	return new FileLoader(new Filesystem, $path);
 });
 
 /*
