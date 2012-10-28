@@ -1,5 +1,7 @@
 # Laravel 4 w/ Vagrant
 
+A basic Ubuntu 12.04 Vagrant setup with [Taylor Otwell's new framework](https://github.com/illuminate/app) and PHP 5.4.
+
 ## Requirements
 
 * VirtualBox - Free virtualization software [Downloads](https://www.virtualbox.org/wiki/Downloads)
@@ -8,7 +10,7 @@
 
 ## Setup
 
-* Clone this repository `git clone git@bitbucket.org:imagingresource/vagabundo.git`
+* Clone this repository `git clone git@github.com:bryannielsen/Laravel4-Vagrant.git`
 * run `vagrant up` inside the newly created directory
 * (the first time you run vagrant it will need to fetch the virtual box image which is ~300mb so depending on your download speed this could take some time)
 * Vagrant will then use puppet to provision the base virtual box with our LAMP stack (this could take a few minutes) also note that composer will need to fetch all of the packages defined in the app's composer.json which will add some more time to the first provisioning run
@@ -28,6 +30,7 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 
 ##### Virtual Machine Specifications #####
 
-* OS    - Ubuntu 12.04
-* PHP   - 5.4.6
-* MySQL - 5.5.24
+* OS     - Ubuntu 12.04
+* Apache - 2.2.22
+* PHP    - 5.4.6
+* MySQL  - 5.5.24
