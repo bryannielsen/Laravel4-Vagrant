@@ -106,6 +106,7 @@ return array(
 		'Illuminate\Foundation\Providers\MailServiceProvider',
 		'Illuminate\Foundation\Providers\MigrationServiceProvider',
 		'Illuminate\Foundation\Providers\PaginationServiceProvider',
+		'Illuminate\Foundation\Providers\PublisherServiceProvider',
 		'Illuminate\Foundation\Providers\RedisServiceProvider',
 		'Illuminate\Foundation\Providers\SeedServiceProvider',
 		'Illuminate\Foundation\Providers\SessionServiceProvider',
