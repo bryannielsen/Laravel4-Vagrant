@@ -92,6 +92,7 @@ return array(
 	'providers' => array(
 
 		'Illuminate\Foundation\Providers\AliasServiceProvider',
+		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Foundation\Providers\AuthServiceProvider',
 		'Illuminate\Foundation\Providers\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\ComposerServiceProvider',
