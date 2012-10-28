@@ -27,7 +27,7 @@ class php
 
     file 
     { 
-        "/etc/php5/fpm/php.ini":
+        "/etc/php5/apache2filter/php.ini":
             ensure  => present,
             owner => root, group => root,
             source  => "/vagrant/puppet/templates/php.ini",

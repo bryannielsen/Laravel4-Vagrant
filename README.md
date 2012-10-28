@@ -15,7 +15,10 @@ A basic Ubuntu 12.04 Vagrant setup with [Taylor Otwell's new framework](https://
 * (the first time you run vagrant it will need to fetch the virtual box image which is ~300mb so depending on your download speed this could take some time)
 * Vagrant will then use puppet to provision the base virtual box with our LAMP stack (this could take a few minutes) also note that composer will need to fetch all of the packages defined in the app's composer.json which will add some more time to the first provisioning run
 * You can verify that everything was successful by opening http://localhost:8888 in a browser
-* *Note: You may have to change permissions on the www/app/storage folder to 777 under the host OS*
+
+*Note: You may have to change permissions on the www/app/storage folder to 777 under the host OS* 
+
+For example: `chmod -R 777 www/app/storage/`
 
 
 ### Using Vagrant
