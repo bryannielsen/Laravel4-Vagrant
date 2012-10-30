@@ -13,11 +13,11 @@
 
 App::before(function($request)
 {
-	// Fired before all requests to the application...
+	//
 });
 
 
 App::after(function($request, $response)
 {
-	// Fired after all requests to the application...
+	//
 });
