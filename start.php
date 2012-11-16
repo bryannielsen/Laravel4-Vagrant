@@ -24,8 +24,8 @@ $app = Illuminate\Foundation\Lightbulb::on();
 |--------------------------------------------------------------------------
 |
 | Here we just defined the path to the application directory. Most likely
-| you will never need to change this value, as the default setup should
-| work perfectly fine for the vast majority of all application setups.
+| you will never need to change this value as the default setup should
+| work perfectly fine for the vast majority of all our applications.
 |
 */
 
@@ -38,9 +38,9 @@ $app['path.base'] = __DIR__;
 | Detect The Application Environment
 |--------------------------------------------------------------------------
 |
-| Illuminate takes a dead simple approach to application environments.
-| Just specify the hosts that belong to a given environment, and we
-| will quickly detect and set the application environment for you.
+| Laravel takes a dead simple approach to your application environments
+| so you can just specify a machine name or HTTP host that matches a
+| given environment, then we will automatically detect it for you.
 |
 */
 
