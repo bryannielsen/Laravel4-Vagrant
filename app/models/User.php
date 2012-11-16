@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Auth\EloquentUser;
+use Illuminate\Auth\UserInterface;
 
-class User extends EloquentUser {
+class User implements UserInterface {
 
 	/**
 	 * The database table used by the model.
@@ -17,5 +17,25 @@ class User extends EloquentUser {
 	 * @var array
 	 */
 	protected $hidden = array('password');
+
+	/**
+	 * Get the unique identifier for the user.
+	 *
+	 * @return mixed
+	 */
+	public function getAuthIdentifier()
+	{
+		return $this->getKey();
+	}
+
+	/**
+	 * Get the password for the user.
+	 *
+	 * @return string
+	 */
+	public function getAuthPassword()
+	{
+		return $this->password;
+	}
 
 }
