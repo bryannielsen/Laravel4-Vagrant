@@ -2,7 +2,6 @@
 
 use Illuminate\Filesystem;
 use Illuminate\Config\FileLoader;
-use Illuminate\Config\ApcFileLoader;
 
 /*
 |--------------------------------------------------------------------------
