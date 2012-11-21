@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'driver' => 'blade',
+	'driver' => 'php',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -33,19 +33,6 @@ return array(
 		__DIR__.'/../views',
 
 	),
-
-	/*
-	|--------------------------------------------------------------------------
-	| Compiled View Cache Path
-	|--------------------------------------------------------------------------
-	|
-	| Some view engines cache a compiled version of their templates, such as
-	| Twig and Blade. Here you may control where those caches are stored.
-	| A sensible default has already been setup for your applications.
-	|
-	*/
-
-	'cache' => __DIR__.'/../storage/views',
 
 	/*
 	|--------------------------------------------------------------------------
