@@ -39,13 +39,20 @@ return array(
 	|
 	*/
 
-	'locales' => array('en'),
-
 	'locale' => 'en',
 
-	'fallback_locale' => 'en',
+	/*
+	|--------------------------------------------------------------------------
+	| Application Fallback Locale
+	|--------------------------------------------------------------------------
+	|
+	| The fallback locale determines the locale to use when the current one
+	| is not available. You may change the value to correspond to any of
+	| the language folders that are provided through your application.
+	|
+	*/
 
-	'locale_path' => __DIR__.'/../lang',
+	'fallback_locale' => 'en',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,27 +100,27 @@ return array(
 
 		'Illuminate\Foundation\Providers\AliasServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
-		'Illuminate\Foundation\Providers\AuthServiceProvider',
-		'Illuminate\Foundation\Providers\CacheServiceProvider',
+		'Illuminate\Auth\AuthServiceProvider',
+		'Illuminate\Cache\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\ComposerServiceProvider',
-		'Illuminate\Foundation\Providers\ControllerServiceProvider',
-		'Illuminate\Foundation\Providers\CookieServiceProvider',
-		'Illuminate\Foundation\Providers\DatabaseServiceProvider',
-		'Illuminate\Foundation\Providers\EncrypterServiceProvider',
-		'Illuminate\Foundation\Providers\EventsServiceProvider',
-		'Illuminate\Foundation\Providers\FilesystemServiceProvider',
-		'Illuminate\Foundation\Providers\HashServiceProvider',
-		'Illuminate\Foundation\Providers\LogServiceProvider',
-		'Illuminate\Foundation\Providers\MailServiceProvider',
-		'Illuminate\Foundation\Providers\MigrationServiceProvider',
-		'Illuminate\Foundation\Providers\PaginationServiceProvider',
+		'Illuminate\Routing\ControllerServiceProvider',
+		'Illuminate\CookieServiceProvider',
+		'Illuminate\Database\DatabaseServiceProvider',
+		'Illuminate\EncryptionServiceProvider',
+		'Illuminate\Events\EventServiceProvider',
+		'Illuminate\FilesystemServiceProvider',
+		'Illuminate\Hashing\HashServiceProvider',
+		'Illuminate\Log\LogServiceProvider',
+		'Illuminate\Mail\MailServiceProvider',
+		'Illuminate\Database\MigrationServiceProvider',
+		'Illuminate\Pagination\PaginationServiceProvider',
 		'Illuminate\Foundation\Providers\PublisherServiceProvider',
-		'Illuminate\Foundation\Providers\RedisServiceProvider',
-		'Illuminate\Foundation\Providers\SeedServiceProvider',
-		'Illuminate\Foundation\Providers\SessionServiceProvider',
-		'Illuminate\Foundation\Providers\TranslationServiceProvider',
-		'Illuminate\Foundation\Providers\ValidatorServiceProvider',
-		'Illuminate\Foundation\Providers\ViewServiceProvider',
+		'Illuminate\Redis\RedisServiceProvider',
+		'Illuminate\Database\SeedServiceProvider',
+		'Illuminate\Session\SessionServiceProvider',
+		'Illuminate\Translation\TranslationServiceProvider',
+		'Illuminate\Validation\ValidationServiceProvider',
+		'Illuminate\View\ViewServiceProvider',
 
 	),
 
