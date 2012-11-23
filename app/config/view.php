@@ -4,21 +4,6 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
-	| Default View Driver
-	|--------------------------------------------------------------------------
-	|
-	| This option controls the default view driver that will get used for the
-	| application. Laravel comes with a few great engines ranging from the
-	| simple PHP engine to the powerful Blade engine. Use what you like!
-	|
-	| Supported: "php", "blade"
-	|
-	*/
-
-	'driver' => 'php',
-
-	/*
-	|--------------------------------------------------------------------------
 	| View Storage Paths
 	|--------------------------------------------------------------------------
 	|
@@ -28,11 +13,7 @@ return array(
 	|
 	*/
 
-	'paths' => array(
-
-		__DIR__.'/../views',
-
-	),
+	'paths' => array(__DIR__.'/../views'),
 
 	/*
 	|--------------------------------------------------------------------------
