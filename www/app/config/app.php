@@ -69,24 +69,6 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
-	| Class Aliases
-	|--------------------------------------------------------------------------
-	|
-	| This array of class aliases will be registered when this application
-	| is started. However, feel free to register as many as you wish as
-	| the aliases are "lazy" loaded so they don't hinder performance.
-	|
-	*/
-
-	'aliases' => array(
-
-		'Controller' => 'Illuminate\Routing\Controllers\Controller',
-		'Eloquent'   => 'Illuminate\Database\Eloquent\Model',
-
-	),
-
-	/*
-	|--------------------------------------------------------------------------
 	| Autoloaded Service Providers
 	|--------------------------------------------------------------------------
 	|
@@ -121,6 +103,51 @@ return array(
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
+
+	),
+
+	/*
+	|--------------------------------------------------------------------------
+	| Class Aliases
+	|--------------------------------------------------------------------------
+	|
+	| This array of class aliases will be registered when this application
+	| is started. However, feel free to register as many as you wish as
+	| the aliases are "lazy" loaded so they don't hinder performance.
+	|
+	*/
+
+	'aliases' => array(
+
+		'App'        => 'Illuminate\Foundation\Facades\App',
+		'Artisan'    => 'Illuminate\Foundation\Facades\Artisan',
+		'Auth'       => 'Illuminate\Foundation\Facades\Auth',
+		'Cache'      => 'Illuminate\Foundation\Facades\Cache',
+		'Config'     => 'Illuminate\Foundation\Facades\Config',
+		'Controller' => 'Illuminate\Routing\Controllers\Controller',
+		'Cookie'     => 'Illuminate\Foundation\Facades\Cookie',
+		'Crypt'      => 'Illuminate\Foundation\Facades\Crypt',
+		'Crypt'      => 'Illuminate\Foundation\Facades\Crypt',
+		'DB'         => 'Illuminate\Foundation\Facades\DB',
+		'Eloquent'   => 'Illuminate\Database\Eloquent\Model',
+		'Event'      => 'Illuminate\Foundation\Facades\Event',
+		'File'       => 'Illuminate\Foundation\Facades\File',
+		'Hash'       => 'Illuminate\Foundation\Facades\Hash',
+		'Input'      => 'Illuminate\Foundation\Facades\Input',
+		'Lang'       => 'Illuminate\Foundation\Facades\Lang',
+		'Log'        => 'Illuminate\Foundation\Facades\Log',
+		'Mail'       => 'Illuminate\Foundation\Facades\Mail',
+		'Paginator'  => 'Illuminate\Foundation\Facades\Paginator',
+		'Redirect'   => 'Illuminate\Foundation\Facades\Redirect',
+		'Redis'      => 'Illuminate\Foundation\Facades\Redis',
+		'Request'    => 'Illuminate\Foundation\Facades\Request',
+		'Response'   => 'Illuminate\Foundation\Facades\Response',
+		'Route'      => 'Illuminate\Foundation\Facades\Route',
+		'Schema'     => 'Illuminate\Foundation\Facades\Schema',
+		'Session'    => 'Illuminate\Foundation\Facades\Session',
+		'URL'        => 'Illuminate\Foundation\Facades\URL',
+		'Validator'  => 'Illuminate\Foundation\Facades\Validator',
+		'View'       => 'Illuminate\Foundation\Facades\View',
 
 	),
 
