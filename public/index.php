@@ -49,3 +49,5 @@ $app = require_once __DIR__.'/../start.php';
 */
 
 $app->run();
+
+//var_dump(number_format((microtime(true) - ILLUMINATE_START) * 1000, 2));
