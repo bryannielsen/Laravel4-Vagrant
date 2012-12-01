@@ -87,41 +87,6 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
-	| Database Migration Options
-	|--------------------------------------------------------------------------
-	|
-	| Database migrations are version control for your database and are very
-	| nice when you're working in a team environment. Here you will set a
-	| few of the migration options, like the migrations directory path.
-	|
-	*/
-
-	'migration' => array(
-
-	/*
-	|--------------------------------------------------------------------------
-	| Migration Paths
-	|--------------------------------------------------------------------------
-	|
-	| This array contains the paths to your migration files. For almost every
-	| appliactions you build, the default "application" path that is given
-	| will suffice; however you're free to include more migration paths.
-	|
-	|
-	| Once a new path is added you may use the "--package" switch the console
-	| application's "migrate:make" command to create a new migrations file
-	| that is located at that location without specifying the full path.
-	|
-	*/
-
-		'paths' => array(
-
-			'application' => __DIR__.'/../database/migrations',
-
-		),
-
-	/*
-	|--------------------------------------------------------------------------
 	| Migration Repository Table
 	|--------------------------------------------------------------------------
 	|
@@ -131,9 +96,7 @@ return array(
 	|
 	*/
 
-		'table' => 'migrations',
-
-	),
+	'migrations' => 'migrations',
 
 	/*
 	|--------------------------------------------------------------------------
