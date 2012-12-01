@@ -9,7 +9,8 @@ class php
         "php-apc", 
         "php5-mcrypt", 
         "php5-gd", 
-        "php5-curl"
+        "php5-curl",
+        "libapache2-mod-php5"
     ]
     
     package 
@@ -27,7 +28,7 @@ class php
 
     file 
     { 
-        "/etc/php5/apache2filter/php.ini":
+        "/etc/php5/apache2/php.ini":
             ensure  => present,
             owner => root, group => root,
             source  => "/vagrant/puppet/templates/php.ini",

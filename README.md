@@ -35,5 +35,5 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 
 * OS     - Ubuntu 12.04
 * Apache - 2.2.22
-* PHP    - 5.4.6
-* MySQL  - 5.5.24
+* PHP    - 5.4.9
+* MySQL  - 5.5.28
