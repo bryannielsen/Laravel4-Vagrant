@@ -9,9 +9,19 @@
 | is built on top of the wonderful Monolog library. By default we will
 | build a rotating log file setup which creates a new file each day.
 |
+| We will bind this setup routine inside a Closure. This allows us to not
+| actually include the logger files until something really needs to be
+| logged by your application, speed up requests that don't use logs.
+|
 */
 
-Log::useDailyFiles(__DIR__.'/../storage/logs/log.txt');
+App::bind('log.setup', function()
+{
+	return function($logger)
+	{
+		$logger->useDailyFiles(__DIR__.'/../storage/logs/log.txt');
+	};
+});
 
 /*
 |--------------------------------------------------------------------------
