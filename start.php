@@ -39,9 +39,9 @@ set_app($app = new Application);
 |
 */
 
-$app['path'] = __DIR__.'/app';
+$app->instance('path', __DIR__.'/app');
 
-$app['path.base'] = __DIR__;
+$app->instance('path.base', __DIR__);
 
 /*
 |--------------------------------------------------------------------------
