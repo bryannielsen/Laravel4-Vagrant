@@ -39,7 +39,7 @@ set_app($app = new Application);
 |
 */
 
-$app->instance('path', __DIR__.'/app');
+$app->instance('path', $appPath = __DIR__.'/app');
 
 $app->instance('path.base', __DIR__);
 
@@ -54,7 +54,7 @@ $app->instance('path.base', __DIR__);
 |
 */
 
-$app->detectEnvironment(array(
+$env = $app->detectEnvironment(array(
 
 	'local' => array('localhost', '*.dev', '*.app'),
 
@@ -71,7 +71,10 @@ $app->detectEnvironment(array(
 |
 */
 
-if (isset($unitTesting)) $app['env'] = $testEnvironment;
+if (isset($unitTesting))
+{
+	$app['env'] = $env = $testEnvironment;
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -84,9 +87,9 @@ if (isset($unitTesting)) $app['env'] = $testEnvironment;
 |
 */
 
-$app['config.loader'] = $app->share(function($app)
+$app['config.loader'] = $app->share(function($app) use ($appPath)
 {
-	$path = $app['path'].'/config';
+	$path = $appPath.'/config';
 
 	return new FileLoader(new Filesystem, $path);
 });
