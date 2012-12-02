@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends Controller {
+class HomeController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
