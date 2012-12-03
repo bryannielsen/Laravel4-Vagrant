@@ -126,7 +126,6 @@ return array(
 		'Controller' => 'Illuminate\Routing\Controllers\Controller',
 		'Cookie'     => 'Illuminate\Foundation\Facades\Cookie',
 		'Crypt'      => 'Illuminate\Foundation\Facades\Crypt',
-		'Crypt'      => 'Illuminate\Foundation\Facades\Crypt',
 		'DB'         => 'Illuminate\Foundation\Facades\DB',
 		'Eloquent'   => 'Illuminate\Database\Eloquent\Model',
 		'Event'      => 'Illuminate\Foundation\Facades\Event',
