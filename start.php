@@ -47,6 +47,21 @@ $env = $app->detectEnvironment(array(
 
 /*
 |--------------------------------------------------------------------------
+| Set PHP Error Reporting Options
+|--------------------------------------------------------------------------
+|
+| Here we will set the strictest error reporting options, and also turn
+| off PHP's error reporting, since all errors will be handled by the
+| framework and we don't want any output leaking back to the user.
+|
+*/
+
+ini_set('display_errors', 'Off');
+
+error_reporting(-1);
+
+/*
+|--------------------------------------------------------------------------
 | Load The Application
 |--------------------------------------------------------------------------
 |
