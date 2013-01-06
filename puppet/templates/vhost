@@ -1,6 +1,4 @@
 <VirtualHost *:80>
-	ServerAdmin Bryan@PacketTide.com
-
 	DocumentRoot /var/www/public
 	
 	<Directory />
