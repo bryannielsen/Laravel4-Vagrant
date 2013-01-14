@@ -83,14 +83,15 @@ return array(
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
+		'Illuminate\Foundation\Providers\CommandCreatorServiceProvider',
 		'Illuminate\Foundation\Providers\ComposerServiceProvider',
 		'Illuminate\Routing\ControllerServiceProvider',
-		'Illuminate\CookieServiceProvider',
+		'Illuminate\Cookie\CookieServiceProvider',
 		'Illuminate\Database\DatabaseServiceProvider',
-		'Illuminate\EncryptionServiceProvider',
-		'Illuminate\Events\EventServiceProvider',
-		'Illuminate\FilesystemServiceProvider',
+		'Illuminate\Encryption\EncryptionServiceProvider',
+		'Illuminate\Filesystem\FilesystemServiceProvider',
 		'Illuminate\Hashing\HashServiceProvider',
+		'Illuminate\Foundation\Providers\KeyGeneratorServiceProvider',
 		'Illuminate\Log\LogServiceProvider',
 		'Illuminate\Mail\MailServiceProvider',
 		'Illuminate\Database\MigrationServiceProvider',
@@ -104,8 +105,22 @@ return array(
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
+		'Illuminate\Workbench\WorkbenchServiceProvider',
 
 	),
+
+	/*
+	|--------------------------------------------------------------------------
+	| Service Provider Manifest
+	|--------------------------------------------------------------------------
+	|
+	| The service provider manifest is used by Laravel to lazy load service
+	| providers which are not needed for each request, as well to keep a
+	| list of all of the services. Here, you may set its storage spot.
+	|
+	*/
+
+	'manifest' => __DIR__.'/../storage/meta',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -120,34 +135,37 @@ return array(
 
 	'aliases' => array(
 
-		'App'        => 'Illuminate\Support\Facades\App',
-		'Artisan'    => 'Illuminate\Support\Facades\Artisan',
-		'Auth'       => 'Illuminate\Support\Facades\Auth',
-		'Cache'      => 'Illuminate\Support\Facades\Cache',
-		'Config'     => 'Illuminate\Support\Facades\Config',
-		'Controller' => 'Illuminate\Routing\Controllers\Controller',
-		'Cookie'     => 'Illuminate\Support\Facades\Cookie',
-		'Crypt'      => 'Illuminate\Support\Facades\Crypt',
-		'DB'         => 'Illuminate\Support\Facades\DB',
-		'Eloquent'   => 'Illuminate\Database\Eloquent\Model',
-		'Event'      => 'Illuminate\Support\Facades\Event',
-		'File'       => 'Illuminate\Support\Facades\File',
-		'Hash'       => 'Illuminate\Support\Facades\Hash',
-		'Input'      => 'Illuminate\Support\Facades\Input',
-		'Lang'       => 'Illuminate\Support\Facades\Lang',
-		'Log'        => 'Illuminate\Support\Facades\Log',
-		'Mail'       => 'Illuminate\Support\Facades\Mail',
-		'Paginator'  => 'Illuminate\Support\Facades\Paginator',
-		'Redirect'   => 'Illuminate\Support\Facades\Redirect',
-		'Redis'      => 'Illuminate\Support\Facades\Redis',
-		'Request'    => 'Illuminate\Support\Facades\Request',
-		'Response'   => 'Illuminate\Support\Facades\Response',
-		'Route'      => 'Illuminate\Support\Facades\Route',
-		'Schema'     => 'Illuminate\Support\Facades\Schema',
-		'Session'    => 'Illuminate\Support\Facades\Session',
-		'URL'        => 'Illuminate\Support\Facades\URL',
-		'Validator'  => 'Illuminate\Support\Facades\Validator',
-		'View'       => 'Illuminate\Support\Facades\View',
+		'App'             => 'Illuminate\Support\Facades\App',
+		'Artisan'         => 'Illuminate\Support\Facades\Artisan',
+		'Auth'            => 'Illuminate\Support\Facades\Auth',
+		'Blade'           => 'Illuminate\Support\Facades\Blade',
+		'Cache'           => 'Illuminate\Support\Facades\Cache',
+		'ClassLoader'     => 'Illuminate\Foundation\ClassLoader',
+		'Config'          => 'Illuminate\Support\Facades\Config',
+		'Controller'      => 'Illuminate\Routing\Controllers\Controller',
+		'Cookie'          => 'Illuminate\Support\Facades\Cookie',
+		'Crypt'           => 'Illuminate\Support\Facades\Crypt',
+		'DB'              => 'Illuminate\Support\Facades\DB',
+		'Eloquent'        => 'Illuminate\Database\Eloquent\Model',
+		'Event'           => 'Illuminate\Support\Facades\Event',
+		'EventSubscriber' => 'Illuminate\Events\Subscriber',
+		'File'            => 'Illuminate\Support\Facades\File',
+		'Hash'            => 'Illuminate\Support\Facades\Hash',
+		'Input'           => 'Illuminate\Support\Facades\Input',
+		'Lang'            => 'Illuminate\Support\Facades\Lang',
+		'Log'             => 'Illuminate\Support\Facades\Log',
+		'Mail'            => 'Illuminate\Support\Facades\Mail',
+		'Paginator'       => 'Illuminate\Support\Facades\Paginator',
+		'Redirect'        => 'Illuminate\Support\Facades\Redirect',
+		'Redis'           => 'Illuminate\Support\Facades\Redis',
+		'Request'         => 'Illuminate\Support\Facades\Request',
+		'Response'        => 'Illuminate\Support\Facades\Response',
+		'Route'           => 'Illuminate\Support\Facades\Route',
+		'Schema'          => 'Illuminate\Support\Facades\Schema',
+		'Session'         => 'Illuminate\Support\Facades\Session',
+		'URL'             => 'Illuminate\Support\Facades\URL',
+		'Validator'       => 'Illuminate\Support\Facades\Validator',
+		'View'            => 'Illuminate\Support\Facades\View',
 
 	),
 
