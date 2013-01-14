@@ -1,9 +1,10 @@
 {
 	"require": {
-		"illuminate/foundation": "1.2.*"
+		"laravel/framework": "4.0.*"
 	},
 	"autoload": {
 		"classmap": [
+			"app/commands",
 			"app/controllers",
 			"app/models",
 			"app/database/migrations",

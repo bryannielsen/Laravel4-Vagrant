@@ -42,23 +42,7 @@ $app->instance('path.base', __DIR__);
 $env = $app->detectEnvironment(array(
 
 	'local' => array('localhost', '*.dev', '*.app'),
-
 ));
-
-/*
-|--------------------------------------------------------------------------
-| Set PHP Error Reporting Options
-|--------------------------------------------------------------------------
-|
-| Here we will set the strictest error reporting options, and also turn
-| off PHP's error reporting, since all errors will be handled by the
-| framework and we don't want any output leaking back to the user.
-|
-*/
-
-ini_set('display_errors', 'Off');
-
-error_reporting(-1);
 
 /*
 |--------------------------------------------------------------------------
@@ -71,6 +55,17 @@ error_reporting(-1);
 |
 */
 
-require __DIR__.'/vendor/illuminate/foundation/src/start.php';
+require $app->getBootstrapFile();
+
+/*
+|--------------------------------------------------------------------------
+| Return The Application
+|--------------------------------------------------------------------------
+|
+| This script returns the application instance. The instance is given to
+| the calling script so we can separate the building of the instances
+| from the actual running of the application and sending responses.
+|
+*/
 
 return $app;

@@ -6,7 +6,7 @@
  * @author   Taylor Otwell <taylorotwell@gmail.com>
  */
 
-define('ILLUMINATE_START', microtime(true));
+define('LARAVEL_START', microtime(true));
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +21,22 @@ define('ILLUMINATE_START', microtime(true));
 */
 
 require __DIR__.'/../vendor/autoload.php';
+
+/*
+|--------------------------------------------------------------------------
+| Register The Workbench Loaders
+|--------------------------------------------------------------------------
+|
+| The Laravel workbench provides a convenient place to develop packages
+| when working locally. However we will need to load in the Composer
+| auto-load files for the packages so that these can be used here.
+|
+*/
+
+if (is_dir($workbench = __DIR__.'/../workbench'))
+{
+	Illuminate\Workbench\Starter::start($workbench);
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -49,5 +65,3 @@ $app = require_once __DIR__.'/../start.php';
 */
 
 $app->run();
-
-//var_dump(number_format((microtime(true) - ILLUMINATE_START) * 1000, 2));
