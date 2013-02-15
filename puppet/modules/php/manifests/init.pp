@@ -32,7 +32,7 @@ class php
             ensure  => present,
             owner => root, group => root,
             source  => "/vagrant/puppet/templates/php.ini",
-            require => Package['php5'],
+            require => [Package['php5'], Package['apache2']],
     }
     
 }
