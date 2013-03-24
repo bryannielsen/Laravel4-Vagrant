@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .vagrant
 package.box
 
@@ -38,6 +37,6 @@ dwsync.xml
 .CVS
 .idea
 
-vendor
+/www/vendor
 composer.phar
 composer.lock
