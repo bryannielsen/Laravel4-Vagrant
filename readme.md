@@ -30,6 +30,12 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 * `vagrant halt` attempts a graceful shutdown of the machine and will need to be brought back with `vagrant up`
 * `vagrant ssh` gives you shell access to the virtual machine
 
+### Custom Vagrant Commands
+
+* `vagrant composer [any composer command]` runs a the composer command on the vagrant box in the /var/www directory
+  * Example: `vagrant composer update` will update laravel and it's dependencies on the vagrant box
+* `vagrant artisan [any artisan command]` same as above but for artisan 
+  * Example: `vagrant artisan migrate` will run all outstanding migrations on installation of laravel on the vagrant box  
 
 ##### Virtual Machine Specifications #####
 
