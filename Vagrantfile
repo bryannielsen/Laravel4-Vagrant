@@ -1,6 +1,9 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+require "#{File.dirname(__FILE__)}/vagrant/artisan.rb"
+require "#{File.dirname(__FILE__)}/vagrant/composer.rb"
+
 Vagrant::Config.run do |config|
     config.vm.define :laravel4 do |lv4_config|
         lv4_config.vm.box = "precise32"

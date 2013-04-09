@@ -28,6 +28,13 @@ class laravel_app
 		timeout => 900,
 	}
 
+	exec { 'get laravel updates':
+                command => "/bin/sh -c 'cd /var/www/ && composer update'",
+                require => [Exec['get laravel packages'], Package['git-core']],
+                timeout => 900,
+	}
+
+
 	file { '/var/www/app/storage':
 		mode => 0777
 	}
