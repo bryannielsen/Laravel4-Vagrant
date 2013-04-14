@@ -18,5 +18,7 @@ include php54 #specific setup steps for 5.4
 include php
 include mysql
 include phpmyadmin
+include beanstalkd
+include redis
 
 include laravel_app
