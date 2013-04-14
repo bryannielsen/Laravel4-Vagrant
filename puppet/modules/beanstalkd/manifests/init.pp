@@ -1,5 +1,5 @@
 class beanstalkd {
-    package { 'beanstalked':
+    package { 'beanstalkd':
         ensure => present,
         require => Exec['apt-get update']
     }
