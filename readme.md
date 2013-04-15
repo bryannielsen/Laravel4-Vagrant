@@ -20,6 +20,12 @@ A basic Ubuntu 12.04 Vagrant setup with [Laravel4](http://four.laravel.com) and 
 
 For example: `chmod -R 777 www/app/storage/`
 
+## Default MySQL Database
+
+* User: root
+* Password: root
+* DB Name: database
+
 
 ### Using Vagrant
 
@@ -42,4 +48,6 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 * OS     - Ubuntu 12.04
 * Apache - 2.2.22
 * PHP    - 5.4.14
-* MySQL  - 5.5.28
+* MySQL  - 5.5.24
+* Beanstalkd - 1.4.6
+* Redis - 2.2.12
