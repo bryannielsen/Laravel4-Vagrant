@@ -25,6 +25,7 @@ class laravel_app
 	exec { 'get laravel packages':
 		command => "/bin/sh -c 'cd /var/www/ && composer install'",
 		require => [Exec['global composer'], Package['git-core']],
+		creates => "/var/www/composer.lock",
 		timeout => 900,
 	}
 
