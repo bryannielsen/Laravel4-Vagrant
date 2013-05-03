@@ -29,10 +29,15 @@ class laravel_app
 		timeout => 900,
 	}
 
+	exec { 'remove optimized class loader':
+		command => "/bin/sh -c 'rm /var/www/bootstrap/compiled.php'",
+		onlyif => "[ -f /var/www/bootstrap/compiled.php ]"
+	}
+
 	exec { 'get laravel updates':
-                command => "/bin/sh -c 'cd /var/www/ && composer update'",
-                require => [Exec['get laravel packages'], Package['git-core']],
-                timeout => 900,
+        command => "/bin/sh -c 'cd /var/www/ && composer update'",
+        require => [Exec['get laravel packages'], Exec['remove optimized class loader'], Package['git-core']],
+        timeout => 900,
 	}
 
 
