@@ -10,6 +10,7 @@ A basic Ubuntu 12.04 Vagrant setup with [Laravel4](http://four.laravel.com) and 
 
 ## Setup
 
+
 * Clone this repository `git clone http://github.com/bryannielsen/Laravel4-Vagrant.git`
 * run `vagrant up` inside the newly created directory
 * (the first time you run vagrant it will need to fetch the virtual box image which is ~300mb so depending on your download speed this could take some time)
@@ -20,14 +21,39 @@ A basic Ubuntu 12.04 Vagrant setup with [Laravel4](http://four.laravel.com) and 
 
 For example: `chmod -R 777 www/app/storage/`
 
-## Default MySQL Database
+
+## Usage
+
+Some basic information on interacting with the vagrant box
+
+
+### Default MySQL Database
 
 * User: root
 * Password: root
 * DB Name: database
 
+### PHP XDebug
 
-### Using Vagrant
+XDebug is included in the build but **disabled by default** because of the effect it can have on performance.  
+
+To enable XDebug:
+
+1. Set the variable `$use_xdebug = "1"` at the beginning of `puppet/manifests/phpbase.pp`
+2. Then you will need to provision the box either with `vagrant up` or by running the command `vagrant provision` if the box is already up
+3. Now you can connect to XDebug on **port 9001**
+
+**XDebug Tools**
+
+* [SublimeXDebug](https://github.com/Kindari/SublimeXdebug) - Free, SublimeText plugin
+* [MacGDBP](http://www.bluestatic.org/software/macgdbp/) - Free, Mac OSX
+* [Codebug](http://www.codebugapp.com/) - Paid, Mac OSX
+
+
+_Note: All XDebug settings can be configured in the php.ini template at `puppet/modules/php/templates/php.ini.erb`_
+
+
+### Vagrant
 
 Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but here are a few common commands:
 
@@ -36,7 +62,7 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 * `vagrant halt` attempts a graceful shutdown of the machine and will need to be brought back with `vagrant up`
 * `vagrant ssh` gives you shell access to the virtual machine
 
-
+----
 ##### Virtual Machine Specifications #####
 
 * OS     - Ubuntu 12.04

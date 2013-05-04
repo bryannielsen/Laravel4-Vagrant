@@ -13,9 +13,8 @@ Vagrant::Config.run do |config|
         lv4_config.vm.forward_port 80, 8888
         lv4_config.vm.forward_port 3306, 8889
         lv4_config.vm.host_name = "laravel"
-  		lv4_config.vm.share_folder("www", "/var/www", "./www", :extra => 'dmode=777,fmode=777')
-
-  		lv4_config.vm.provision :shell, :inline => "echo \"America/New_York\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
+        lv4_config.vm.share_folder("www", "/var/www", "./www", :extra => 'dmode=777,fmode=777')
+        lv4_config.vm.provision :shell, :inline => "echo \"America/New_York\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
 
         lv4_config.vm.provision :puppet do |puppet|
             puppet.manifests_path = "puppet/manifests"

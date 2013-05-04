@@ -1,5 +1,6 @@
 class php 
 {
+
     $packages = [
         "php5", 
         "php5-cli", 
@@ -10,7 +11,8 @@ class php
         "php5-mcrypt", 
         "php5-gd", 
         "php5-curl",
-        "libapache2-mod-php5"
+        "libapache2-mod-php5",
+        "php5-xdebug"
     ]
     
     package 
@@ -31,7 +33,9 @@ class php
         "/etc/php5/apache2/php.ini":
             ensure  => present,
             owner => root, group => root,
-            source  => "/vagrant/puppet/templates/php.ini",
+            notify  => Service['apache2'],
+            #source  => "/vagrant/puppet/templates/php.ini",
+            content => template('php/php.ini.erb'),
             require => [Package['php5'], Package['apache2']],
     }
     
