@@ -23,5 +23,6 @@ include mysql
 include phpmyadmin
 include beanstalkd
 include redis
+include memcached
 
 include laravel_app
