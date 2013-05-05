@@ -26,6 +26,12 @@ For example: `chmod -R 777 www/app/storage/`
 
 Some basic information on interacting with the vagrant box
 
+### Port Forwards
+
+* 8888 - Apache
+* 8889 - MySQL 
+* 5433 - PostgreSQL
+
 
 ### Default MySQL/PostgreSQL Database
 
@@ -73,3 +79,4 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 * PostgreSQL - 9.1
 * Beanstalkd - 1.4.6
 * Redis - 2.2.12
+* Memcached - 1.4.13
