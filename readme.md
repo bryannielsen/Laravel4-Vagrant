@@ -27,11 +27,12 @@ For example: `chmod -R 777 www/app/storage/`
 Some basic information on interacting with the vagrant box
 
 
-### Default MySQL Database
+### Default MySQL/PostgreSQL Database
 
 * User: root
 * Password: root
 * DB Name: database
+
 
 ### PHP XDebug
 
@@ -69,5 +70,6 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 * Apache - 2.2.22
 * PHP    - 5.4.14
 * MySQL  - 5.5.24
+* PostgreSQL - 9.1
 * Beanstalkd - 1.4.6
 * Redis - 2.2.12

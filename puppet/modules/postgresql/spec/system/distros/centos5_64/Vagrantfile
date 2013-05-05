@@ -1,0 +1,12 @@
+require File.expand_path(File.join(__FILE__, '../../../../support/vagrant_common'))
+
+Vagrant::Config.run do |config|
+
+  config.vm.define :centos5 do |vm_config|
+      vm_config.vm.box = "centos-58-x64"
+      vm_config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-58-x64.box"
+  end
+
+  apply_common_vagrant_config(config)
+
+end

@@ -1,0 +1,13 @@
+require File.expand_path(File.join(__FILE__, '../../../../support/vagrant_common'))
+
+Vagrant::Config.run do |config|
+
+  config.vm.define :lucid do |vm_config|
+      # Test on 64 bit lucid
+      vm_config.vm.box = "lucid64"
+      vm_config.vm.box_url = "http://files.vagrantup.com/lucid64.box"
+  end
+
+  apply_common_vagrant_config(config)
+
+end
