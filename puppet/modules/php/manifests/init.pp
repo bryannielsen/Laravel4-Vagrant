@@ -12,7 +12,8 @@ class php
         "php5-gd", 
         "php5-curl",
         "libapache2-mod-php5",
-        "php5-xdebug"
+        "php5-xdebug",
+        "php5-pgsql"
     ]
     
     package 
