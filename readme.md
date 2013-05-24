@@ -74,7 +74,7 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 
 * OS     - Ubuntu 12.04
 * Apache - 2.2.22
-* PHP    - 5.4.14
+* PHP    - 5.4.15
 * MySQL  - 5.5.24
 * PostgreSQL - 9.1
 * Beanstalkd - 1.4.6
