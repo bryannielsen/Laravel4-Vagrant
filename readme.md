@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Laravel 4 w/ Vagrant
 
 A basic Ubuntu 12.04 Vagrant setup with [Laravel4](http://laravel.com/docs) and PHP 5.4.
