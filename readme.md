@@ -21,7 +21,6 @@ A basic Ubuntu 12.04 Vagrant setup with [Laravel4](http://laravel.com/docs) and 
 
 For example: `chmod -R 777 www/app/storage/`
 
-
 ## Usage
 
 Some basic information on interacting with the vagrant box
