@@ -1,6 +1,6 @@
 class mysql 
 {
-    $mysqlPassword = "root"
+    $mysqlPassword = ""
  
     package 
     { 
@@ -17,11 +17,13 @@ class mysql
             require => Package["mysql-server"],
     }
 
-    exec 
-    { 
-        "set-mysql-password":
-            unless => "mysqladmin -uroot -p$mysqlPassword status",
-            command => "mysqladmin -uroot password $mysqlPassword",
+    # Make sure that any previously setup boxes are gracefully 
+    # transitioned to the new empty root password.
+    exec
+    {
+    	"set-mysql-password":
+            onlyif => "mysqladmin -uroot -proot status",
+            command => "mysqladmin -uroot -proot password $mysqlPassword",
             require => Service["mysql"],
     }
 
