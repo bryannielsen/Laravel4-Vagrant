@@ -33,10 +33,18 @@ class laravel_app
 		timeout => 1800,
 	}
 
-	exec { 'get laravel updates':
+	exec { 'update packages':
         command => "/bin/sh -c 'cd /var/www/ && composer update'",
         require => Package['git-core'],
-        onlyif => "[ -f /var/www/composer.json ]",
+        onlyif => [ "test -f /var/www/composer.json", "test -d /var/www/vendor" ],
+        timeout => 900,
+	}
+
+	exec { 'install packages':
+        command => "/bin/sh -c 'cd /var/www/ && composer install'",
+        require => Package['git-core'],
+        onlyif => [ "test -f /var/www/composer.json" ],
+        creates => "/var/www/vendor/autoload.php",
         timeout => 900,
 	}
 
