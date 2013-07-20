@@ -17,5 +17,15 @@ class phpmyadmin
             target => "/etc/phpmyadmin/apache.conf",
             require => Package['apache2'],
             notify => Service["apache2"]
-    }  
+    }
+
+    file 
+    { 
+        "/etc/phpmyadmin/config.inc.php":
+            ensure  => present,
+            owner => root, group => root,
+            notify  => Service['apache2'],
+            source  => "/vagrant/puppet/modules/phpmyadmin/templates/config.inc.php",
+            require => [Package['phpmyadmin'], Package['apache2']],
+    }
 }

@@ -39,6 +39,10 @@ Some basic information on interacting with the vagrant box
 * DB Name: database
 
 
+### PHPmyAdmin
+
+Accessible at http://localhost:8888/phpmyadmin using MySQL access credentials above.
+
 ### PHP XDebug
 
 XDebug is included in the build but **disabled by default** because of the effect it can have on performance.  
