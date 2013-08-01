@@ -14,7 +14,7 @@ class php54
    	exec 
 	{ 
 	    'add php54 apt-repo':
-	        command => '/usr/bin/add-apt-repository ppa:ondrej/php5 -y',
+	        command => '/usr/bin/add-apt-repository ppa:ondrej/php5-oldstable -y',
 	        require => Package['python-software-properties'],
 	}
 
