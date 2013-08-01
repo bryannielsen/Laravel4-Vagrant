@@ -16,9 +16,9 @@ exec
 
 include bootstrap
 include other
-include apache
 include php54 #specific setup steps for 5.4
 include php
+include apache
 include mysql
 include phpmyadmin
 include beanstalkd

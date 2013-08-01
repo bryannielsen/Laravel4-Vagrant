@@ -35,7 +35,7 @@ class laravel_app
 
 	exec { 'update packages':
         command => "/bin/sh -c 'cd /var/www/ && composer update'",
-        require => Package['git-core'],
+        require => [Package['git-core'], Package['php5']],
         onlyif => [ "test -f /var/www/composer.json", "test -d /var/www/vendor" ],
         timeout => 900,
 	}
