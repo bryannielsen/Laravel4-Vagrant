@@ -4,9 +4,9 @@ A basic Ubuntu 12.04 Vagrant setup with [Laravel4](http://laravel.com/docs) and 
 
 ## Requirements
 
-* VirtualBox - Free virtualization software [Downloads](https://www.virtualbox.org/wiki/Downloads)
-* Vagrant - Tool for working with virtualbox images [Vagrant Home](https://www.vagrantup.com), click on 'download now link'
-* Git - Source Control Management [Downloads](http://git-scm.com/downloads)
+* VirtualBox - Free virtualization software [Download Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+* Vagrant **1.3+** - Tool for working with virtualbox images [Download Vagrant](https://www.vagrantup.com)
+* Git - Source Control Management [Download Git](http://git-scm.com/downloads)
 
 ## Setup
 
@@ -77,7 +77,7 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 
 * OS     - Ubuntu 12.04
 * Apache - 2.2.22
-* PHP    - 5.4.17
+* PHP    - 5.4.19
 * MySQL  - 5.5.24
 * PostgreSQL - 9.1
 * Beanstalkd - 1.4.6
