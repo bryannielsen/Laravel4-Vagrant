@@ -1,5 +1,5 @@
 # Enable XDebug ("0" | "1")
-$use_xdebug = "0"
+$use_xdebug = "1"
 
 # Default path
 Exec 
@@ -24,6 +24,7 @@ include phpmyadmin
 include beanstalkd
 include redis
 include memcached
+include pearpackages
 
 include laravel_app
 
