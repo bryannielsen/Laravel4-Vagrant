@@ -1,5 +1,5 @@
 # Enable XDebug ("0" | "1")
-$use_xdebug = "1"
+$use_xdebug = "0"
 
 # Default path
 Exec 
