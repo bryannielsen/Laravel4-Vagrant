@@ -35,6 +35,7 @@ class { 'postgresql::server':
     'manage_redhat_firewall'     => true,
     'postgres_password'          => 'vagrant',
   },
+  require => [Exec['apt-get update'], Package['python-software-properties']]
 }
 
 postgresql::db { 'database':
