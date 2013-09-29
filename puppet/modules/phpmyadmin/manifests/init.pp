@@ -12,7 +12,7 @@ class phpmyadmin
   
     file 
     { 
-        "/etc/apache2/conf.d/phpmyadmin.conf":
+        "/etc/apache2/conf-enabled/phpmyadmin.conf":
             ensure => link,
             target => "/etc/phpmyadmin/apache.conf",
             require => Package['apache2'],

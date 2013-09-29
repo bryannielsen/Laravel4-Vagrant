@@ -11,12 +11,12 @@ exec
 { 
     'apt-get update':
         command => '/usr/bin/apt-get update',
-        require => Exec['add php54 apt-repo']
+        require => Exec['add php55 apt-repo']
 }
 
 include bootstrap
 include other
-include php54 #specific setup steps for 5.4
+include php55 #specific setup steps for 5.5
 include php
 include apache
 include mysql
