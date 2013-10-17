@@ -1817,10 +1817,10 @@ ldap.max_links = -1
 ; tab-width: 4
 ; End:
 
-<% if use_xdebug != "0" %>
+<% if @use_xdebug != "0" %>
 [xdebug]
 xdebug.remote_enable=1
-#xdebug.remote_host=localhost
+;xdebug.remote_host=localhost
 xdebug.remote_port=9001
 xdebug.remote_autostart=1
 xdebug.remote_connect_back=1
