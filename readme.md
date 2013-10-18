@@ -56,7 +56,6 @@ To enable XDebug:
 
 **XDebug Tools**
 
-* [SublimeXDebug](https://github.com/Kindari/SublimeXdebug) - Free, SublimeText plugin
 * [MacGDBP](http://www.bluestatic.org/software/macgdbp/) - Free, Mac OSX
 * [Codebug](http://www.codebugapp.com/) - Paid, Mac OSX
 
