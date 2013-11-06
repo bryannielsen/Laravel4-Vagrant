@@ -1,4 +1,4 @@
-class laravel_app 
+class laravel_app
 {
 
 	package { 'git-core':
@@ -20,7 +20,7 @@ class laravel_app
 	# Check to see if there's a composer.json and app directory before we delete everything
 	# We need to clean the directory in case a .DS_STORE file or other junk pops up before
 	# the composer create-project is called
-	exec { 'clean www directory': 
+	exec { 'clean www directory':
 		command => "/bin/sh -c 'cd /var/www && find -mindepth 1 -delete'",
 		unless => [ "test -f /var/www/composer.json", "test -d /var/www/app" ],
 		require => Package['apache2']
@@ -28,17 +28,19 @@ class laravel_app
 
 
 	exec { 'create laravel project':
-		command => "/bin/sh -c 'cd /var/www/ && composer create-project laravel/laravel . -n --prefer-dist'",
+		command => "/bin/sh -c 'cd /var/www/ && composer --verbose create-project laravel/laravel . --prefer-dist'",
 		require => [Exec['global composer'], Package['git-core'], Exec['clean www directory']],
 		creates => "/var/www/composer.json",
 		timeout => 1800,
+		logoutput => true
 	}
 
 	exec { 'update packages':
-        command => "/bin/sh -c 'cd /var/www/ && composer update'",
+        command => "/bin/sh -c 'cd /var/www/ && composer --verbose update'",
         require => [Package['git-core'], Package['php5'], Exec['global composer']],
         onlyif => [ "test -f /var/www/composer.json", "test -d /var/www/vendor" ],
         timeout => 900,
+        logoutput => true
 	}
 
 	exec { 'install packages':
