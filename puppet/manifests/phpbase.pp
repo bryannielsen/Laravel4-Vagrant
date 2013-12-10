@@ -15,7 +15,7 @@ exec
 }
 
 include bootstrap
-include other
+include other #curl and sqlite
 include php55 #specific setup steps for 5.5
 include php
 include apache
