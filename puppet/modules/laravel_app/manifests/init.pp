@@ -26,17 +26,23 @@ class laravel_app
 		require => Package['apache2']
 	}
 
+	exec { 'setup laravel installer':
+		command => "/bin/sh -c 'wget http://laravel.com/laravel.phar && chmod +x laravel.phar && mv laravel.phar /usr/local/bin/laravel'",
+		creates => [ "/usr/local/bin/laravel"],
+		timeout => 900
+	}
+
 
 	exec { 'create laravel project':
-		command => "/bin/sh -c 'cd /var/www/ && composer --verbose create-project laravel/laravel . --prefer-dist'",
-		require => [Exec['global composer'], Package['git-core'], Exec['clean www directory']],
+		command => "/bin/sh -c 'cd /var/www/ && laravel new temp && mv temp/* . && rm -rf temp'",
+		require => [Exec['setup laravel installer'], Package['php5'], Package['git-core']], #Exec['clean www directory']
 		creates => "/var/www/composer.json",
 		timeout => 1800,
 		logoutput => true
 	}
 
 	exec { 'update packages':
-        command => "/bin/sh -c 'cd /var/www/ && composer --verbose update'",
+        command => "/bin/sh -c 'cd /var/www/ && composer --verbose --prefer-dist update'",
         require => [Package['git-core'], Package['php5'], Exec['global composer']],
         onlyif => [ "test -f /var/www/composer.json", "test -d /var/www/vendor" ],
         timeout => 900,
