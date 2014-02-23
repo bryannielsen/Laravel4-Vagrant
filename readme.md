@@ -39,6 +39,7 @@ Some basic information on interacting with the vagrant box
 * Password: (blank)
 * DB Name: database
 
+*To provision your machien with postgresql uncomment the line to include postgresql in [puppet/manifests/phpbase.pp](puppet/manifests/phpbase.pp#L27)*
 
 ### PHPmyAdmin
 
