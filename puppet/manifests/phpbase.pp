@@ -24,6 +24,7 @@ include phpmyadmin
 include beanstalkd
 include redis
 include memcached
+include composer
 
 include laravel_app
 
