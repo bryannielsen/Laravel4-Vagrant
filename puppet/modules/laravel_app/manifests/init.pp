@@ -5,18 +5,6 @@ class laravel_app
     	ensure => present,
     }
 
-   	exec { 'install composer':
-	    command => 'curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin',
-	    require => Package['php5-cli'],
-	    unless => "[ -f /usr/local/bin/composer ]"
-	}
-
-	exec { 'global composer':
-		command => "sudo mv /usr/local/bin/composer.phar /usr/local/bin/composer",
-		require => Exec['install composer'],
-		unless => "[ -f /usr/local/bin/composer ]"
-	}
-
 	# Check to see if there's a composer.json and app directory before we delete everything
 	# We need to clean the directory in case a .DS_STORE file or other junk pops up before
 	# the composer create-project is called
