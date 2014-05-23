@@ -36,7 +36,8 @@ dwsync.xml
 .svn
 .CVS
 .idea
-/www/bootstrap/compiled.php
-/www/vendor
-composer.phar
-composer.lock
+
+# ignore www directory
+/www/
+!/www/.gitkeep
+
