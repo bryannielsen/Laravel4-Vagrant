@@ -38,6 +38,6 @@ dwsync.xml
 .idea
 
 # ignore www directory
-/www/
+/www/*
 !/www/.gitkeep
 
