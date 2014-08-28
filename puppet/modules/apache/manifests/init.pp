@@ -15,8 +15,8 @@ class apache
             require     => Package['apache2'],
             subscribe   => [
                 File["/etc/apache2/mods-enabled/rewrite.load"],
-                File["/etc/apache2/sites-available/default"],
-                File["/etc/apache2/conf.d/phpmyadmin.conf"]
+                File["/etc/apache2/sites-available/000-default.conf"],
+                File["/etc/apache2/conf-enabled/phpmyadmin.conf"]
             ],
     }
 
@@ -30,7 +30,7 @@ class apache
 
     file 
     { 
-        "/etc/apache2/sites-available/default":
+        "/etc/apache2/sites-available/000-default.conf":
             ensure  => present,
             owner => root, group => root,
             source  => "/vagrant/puppet/templates/vhost",
@@ -39,7 +39,7 @@ class apache
 
     exec 
     { 
-        'echo "ServerName localhost" | sudo tee /etc/apache2/conf.d/fqdn':
+        'echo "ServerName localhost" | sudo tee /etc/apache2/conf-enabled/fqdn.conf':
             require => Package['apache2'],
     }
 }

@@ -1,6 +1,7 @@
 # Laravel 4 w/ Vagrant
 
-A basic Ubuntu 12.04 Vagrant setup with [Laravel4](http://laravel.com/docs) and PHP 5.4.
+A basic Ubuntu 12.04 Vagrant setup with [Laravel4](http://laravel.com/docs) and PHP 5.5.
+PHP 5.4 w/ Apache 2.2 is available on the php54 branch.
 
 ## Requirements
 
@@ -55,7 +56,6 @@ To enable XDebug:
 
 **XDebug Tools**
 
-* [SublimeXDebug](https://github.com/Kindari/SublimeXdebug) - Free, SublimeText plugin
 * [MacGDBP](http://www.bluestatic.org/software/macgdbp/) - Free, Mac OSX
 * [Codebug](http://www.codebugapp.com/) - Paid, Mac OSX
 
@@ -76,9 +76,9 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 ##### Virtual Machine Specifications #####
 
 * OS     - Ubuntu 12.04
-* Apache - 2.2.22
-* PHP    - 5.4.19
-* MySQL  - 5.5.24
+* Apache - 2.4.6
+* PHP    - 5.5.4
+* MySQL  - 5.5.32
 * PostgreSQL - 9.1
 * Beanstalkd - 1.4.6
 * Redis - 2.2.12
