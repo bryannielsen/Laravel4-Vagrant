@@ -50,7 +50,7 @@ class php
             owner   => root, group => root,
             notify  => Service['apache2'],
             content => template('php/cli.php.ini.erb'),
-            require => [Package['php5']],
+            require => [Package['php5'], Package['php5-cli']],
     }
 
 }
