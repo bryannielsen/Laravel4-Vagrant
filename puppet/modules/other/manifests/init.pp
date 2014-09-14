@@ -6,4 +6,10 @@ class other
             ensure  => present,
             require => Exec['apt-get update']
     }
+    package 
+    { 
+        "sqlite":
+            ensure  => present,
+            require => Exec['apt-get update']
+    }
 }
