@@ -15,14 +15,16 @@ class laravel_app
 	}
 
 	exec { 'setup laravel installer':
-		command => "/bin/sh -c 'wget http://laravel.com/laravel.phar && chmod +x laravel.phar && mv laravel.phar /usr/local/bin/laravel'",
+		command => "composer global require 'laravel/installer=~1.1'",
 		creates => [ "/usr/local/bin/laravel"],
-		timeout => 900
+		require => [Exec['global composer']],
+		timeout => 900,
+		logoutput => true
 	}
 
 
 	exec { 'create laravel project':
-		command => "/bin/bash -c 'cd /var/www/ && shopt -s dotglob nullglob; laravel new temp && mv temp/* . && rm -rf temp'",
+		command => "/bin/bash -c 'cd /var/www/ && shopt -s dotglob nullglob; composer create-project laravel/laravel temp && mv temp/* . && rm -rf temp'",
 		require => [Exec['setup laravel installer'], Package['php5'], Package['git-core']], #Exec['clean www directory']
 		creates => "/var/www/composer.json",
 		timeout => 1800,
