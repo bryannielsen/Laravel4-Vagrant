@@ -24,7 +24,7 @@ class laravel_app
 
 
 	exec { 'create laravel project':
-		command => "/bin/bash -c 'cd /var/www/ && shopt -s dotglob nullglob; composer create-project laravel/laravel temp && mv temp/* . && rm -rf temp'",
+		command => "/bin/bash -c 'cd /var/www/ && shopt -s dotglob nullglob; composer create-project laravel/laravel temp 4.2 --prefer-dist && mv temp/* . && rm -rf temp'",
 		require => [Exec['setup laravel installer'], Package['php5'], Package['git-core']], #Exec['clean www directory']
 		creates => "/var/www/composer.json",
 		timeout => 1800,
